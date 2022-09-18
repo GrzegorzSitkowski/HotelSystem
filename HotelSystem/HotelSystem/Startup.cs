@@ -41,7 +41,7 @@ namespace HotelSystem
                         Url = new Uri("https://dev-grzegorz.pl/"),
                     }
                 });
-                var filePath = Path.Combine(AppContext.BaseDirectory, "WebApplication2.mxl");
+                var filePath = Path.Combine(AppContext.BaseDirectory, "HotelSystem.mxl");
                 c.IncludeXmlComments(filePath);
             });
         }
