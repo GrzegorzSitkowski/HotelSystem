@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -30,7 +31,18 @@ namespace HotelSystem
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelSystem", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "HotelSystem",
+                    Version = "v1",
+                    Description = "A simple web application.",
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                    {
+                        Name = "Grzegorz Sitkowski",
+                        Url = new Uri("https://dev-grzegorz.pl/"),
+                    }
+                });
+                var filePath = Path.Combine(AppContext.BaseDirectory, "WebApplication2.mxl");
+                c.IncludeXmlComments(filePath);
             });
         }
 
@@ -40,9 +52,10 @@ namespace HotelSystem
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelSystem v1"));
             }
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelSystem v1"));
 
             app.UseHttpsRedirection();
 
