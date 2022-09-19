@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S2NCO888nz8tshWHSyR8zBDYCM8UXjUvPNLXdpRyHL5DQhm2XAfGgORYTphKU16XAt558LIHMCIz5isBlxNAxA==",
+  "dgSpecHash": "s8MpBHUSd1/HKr5gT4nPthVfRW1XXIxYzWkpxLphKjDqJw3RWQHA12vLuOH5EUIBrnUJ8Qt2Y7iBqLf66qdRRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.csproj",
+  "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
