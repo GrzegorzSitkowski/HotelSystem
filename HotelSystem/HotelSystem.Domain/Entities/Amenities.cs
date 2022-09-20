@@ -19,5 +19,6 @@ namespace HotelSystem.Domain.Entities
         public bool Tv { get; set; }
         public bool CoffeeMachine { get; set; }
         public bool WiFi { get; set; }
+        public ICollection<Room> Rooms { get; set; }
     }
 }
