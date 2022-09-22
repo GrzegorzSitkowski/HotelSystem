@@ -1,4 +1,5 @@
-﻿using HotelSystem.Domain.ValueObjects;
+﻿using HotelSystem.Domain.Common;
+using HotelSystem.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Domain.Entities
 {
-    public class User
+    public class User : AuditableEntity
     {
-        public int Id { get; set; }
         public string Type { get; set; }
         public string Mail { get; set; }
         public PersonName UserName {get; set;}

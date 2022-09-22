@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelSystem.Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Domain.Entities
 {
-    public class Amenities
+    public class Amenities : AuditableEntity
     {
-        public int Id { get; set; }
         public bool EntireApartment { get; set; }
         public bool PrivateBathroom { get; set; }
         public bool PrivateKitchenette { get; set; }
