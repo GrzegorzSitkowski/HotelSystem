@@ -160,6 +160,16 @@
         "runtime": {
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
         }
+      },
+      "HotelSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/HotelSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HotelSystem.Domain.dll": {}
+        }
       }
     }
   },
@@ -519,10 +529,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "HotelSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../HotelSystem.Domain/HotelSystem.Domain.csproj",
+      "msbuildProject": "../HotelSystem.Domain/HotelSystem.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "HotelSystem.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.16"
     ]
   },
@@ -557,7 +573,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Domain\\HotelSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Domain\\HotelSystem.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
