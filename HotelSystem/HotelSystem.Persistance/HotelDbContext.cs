@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Domain.Common;
+using HotelSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,16 @@ namespace HotelSystem.Persistance
     public class HotelDbContext : DbContext
     {
         public HotelDbContext(DbContextOptions<HotelDbContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<Amenities> Amenities { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
         }
