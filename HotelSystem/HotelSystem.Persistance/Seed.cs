@@ -47,6 +47,19 @@ namespace HotelSystem.Persistance
                     Avability = false,
                     Description = "Room for two."
                 });
+
+            modelBuilder.Entity<User>(u =>
+            {
+                u.HasData(new User()
+                {
+                    Id = 1,
+                    Type = "Customer",
+                    Mail = "example@mail.com",
+                    Password = "password"
+                });
+                u.OwnsOne(u => u.UserName).HasData(new { UserId = 1, FirsName = "Grzegorz", LastName = "Sitkowski" });
+            });
+                   
         }
     }
 }
