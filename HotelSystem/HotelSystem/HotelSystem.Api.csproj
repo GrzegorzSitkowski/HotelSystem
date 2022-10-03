@@ -9,7 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HotelSystem.Infrastructure\HotelSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\HotelSystem.Persistance\HotelSystem.Persistance.csproj" />
   </ItemGroup>
 
 </Project>
