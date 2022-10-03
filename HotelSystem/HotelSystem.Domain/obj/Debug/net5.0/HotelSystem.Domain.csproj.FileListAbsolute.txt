@@ -1,0 +1,12 @@
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\bin\Debug\net5.0\HotelSystem.Domain.deps.json
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\bin\Debug\net5.0\HotelSystem.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\bin\Debug\net5.0\ref\HotelSystem.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\bin\Debug\net5.0\HotelSystem.Domain.pdb
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.AssemblyInfo.cs
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\ref\HotelSystem.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Domain\obj\Debug\net5.0\HotelSystem.Domain.pdb
