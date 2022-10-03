@@ -24,7 +24,7 @@ namespace HotelSystem.Persistance
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<User>().OwnsOne(p => p.UserName);
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
