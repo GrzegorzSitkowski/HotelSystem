@@ -26,8 +26,17 @@ namespace HotelSystem.Persistance
                     Tv = true,
                     CoffeeMachine = false,
                     WiFi = true
-                }
-                );
+                });
+
+            modelBuilder.Entity<Reservation>().HasData(
+                new Reservation()
+                {
+                    Id = 1,
+                    Mail = "example@mail.com",
+                    Payment = true,
+                    UserId = 1,
+                    RoomId = 1
+                });
         }
     }
 }
