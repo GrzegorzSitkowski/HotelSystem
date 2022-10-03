@@ -37,6 +37,16 @@ namespace HotelSystem.Persistance
                     UserId = 1,
                     RoomId = 1
                 });
+
+            modelBuilder.Entity<Room>().HasData(
+                new Room()
+                {
+                    Id = 1,
+                    Capacity = 30,
+                    Price = 450,
+                    Avability = false,
+                    Description = "Room for two."
+                });
         }
     }
 }
