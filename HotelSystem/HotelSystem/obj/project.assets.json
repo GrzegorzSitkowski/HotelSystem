@@ -1760,7 +1760,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "HotelSystem.Application": "1.0.0"
+          "HotelSystem.Application": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
         "compile": {
           "bin/placeholder/HotelSystem.Infrastructure.dll": {}

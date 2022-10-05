@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "enEutL8evg2a6LMSySC4nh0hg6M/wwAcUZD6PuGJXdPmhYeGdrs6J7CiXgaGgmff/zZBYt8rJPN1bq9/1UCFEA==",
+  "dgSpecHash": "PD7l054SMmOHwNnuW58LPKaQj1Wucz48TGHoRuVx85V27HidJSzPwpIx7rz4n96h/4JMF/HPSh4NccQFKW+dZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sitko\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
