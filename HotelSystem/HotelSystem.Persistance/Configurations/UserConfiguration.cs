@@ -16,8 +16,8 @@ namespace HotelSystem.Persistance.Configurations
             builder.Property(p => p.Type).HasMaxLength(30).IsRequired();
             builder.Property(p => p.Mail).IsRequired();
             builder.Property(p => p.Password).IsRequired();
-            builder.OwnsOne(p => p.UserName).Property(p => p.FirstName).HasMaxLength(30).HasColumnType("FirstName").IsRequired();
-            builder.OwnsOne(p => p.UserName).Property(p => p.LastName).HasMaxLength(30).HasColumnType("LastName").IsRequired();
+            //builder.OwnsOne(p => p.UserName).Property(p => p.FirstName).HasMaxLength(30).HasColumnType("FirstName");
+            //builder.OwnsOne(p => p.UserName).Property(p => p.LastName).HasMaxLength(30).HasColumnType("LastName");
         }
     }
 }

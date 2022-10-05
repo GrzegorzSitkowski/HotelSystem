@@ -42,6 +42,7 @@ namespace HotelSystem.Persistance
                 new Room()
                 {
                     Id = 1,
+                    Name = "Double Room",
                     Capacity = 30,
                     Price = 450,
                     Avability = false,
