@@ -1736,6 +1736,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "HotelSystem.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/HotelSystem.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HotelSystem.Application.dll": {}
+        }
+      },
       "HotelSystem.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1749,6 +1759,9 @@
       "HotelSystem.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "HotelSystem.Application": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/HotelSystem.Infrastructure.dll": {}
         },
@@ -6385,6 +6398,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "HotelSystem.Application/1.0.0": {
+      "type": "project",
+      "path": "../HotelSystem.Application/HotelSystem.Application.csproj",
+      "msbuildProject": "../HotelSystem.Application/HotelSystem.Application.csproj"
     },
     "HotelSystem.Domain/1.0.0": {
       "type": "project",

@@ -8,6 +8,6 @@ namespace HotelSystem.Application.Interfaces
 {
     public interface IDateTime
     {
-        DateTime Now { get; set; }
+        DateTime Now { get;}
     }
 }
