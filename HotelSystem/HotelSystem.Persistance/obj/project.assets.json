@@ -1674,6 +1674,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "HotelSystem.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/HotelSystem.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HotelSystem.Application.dll": {}
+        }
+      },
       "HotelSystem.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6211,6 +6221,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "HotelSystem.Application/1.0.0": {
+      "type": "project",
+      "path": "../HotelSystem.Application/HotelSystem.Application.csproj",
+      "msbuildProject": "../HotelSystem.Application/HotelSystem.Application.csproj"
+    },
     "HotelSystem.Domain/1.0.0": {
       "type": "project",
       "path": "../HotelSystem.Domain/HotelSystem.Domain.csproj",
@@ -6219,6 +6234,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "HotelSystem.Application >= 1.0.0",
       "HotelSystem.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.16",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.16",
@@ -6262,6 +6278,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Application\\HotelSystem.Application.csproj": {
+              "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Application\\HotelSystem.Application.csproj"
+            },
             "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Domain\\HotelSystem.Domain.csproj": {
               "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Domain\\HotelSystem.Domain.csproj"
             }
