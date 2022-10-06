@@ -13,8 +13,4 @@
     <ProjectReference Include="..\HotelSystem.Application\HotelSystem.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="FileStore\" />
-  </ItemGroup>
-
 </Project>
