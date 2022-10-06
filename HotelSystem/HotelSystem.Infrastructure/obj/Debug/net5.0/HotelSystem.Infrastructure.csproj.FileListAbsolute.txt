@@ -1,0 +1,12 @@
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Infrastructure.deps.json
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Infrastructure.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\ref\HotelSystem.Infrastructure.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Infrastructure.pdb
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\ref\HotelSystem.Infrastructure.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.pdb
