@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HotelSystem.Application.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,6 +15,8 @@ namespace HotelSystem.Persistance
         public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<HotelDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("HotelDatabase")));
+
+            services.AddScoped<IHotelDbContext, HotelDbContext>();
 
             return services;
         }
