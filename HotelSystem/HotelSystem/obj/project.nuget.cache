@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p1kKKjDEBT/j53cWC014xY2m6+k6v45lmvsFiMEbQh2IYjA7jmLsEWhFz2hl7LNp83xQCWaIazLJNJfFoosiIQ==",
+  "dgSpecHash": "/6K7rcO46YmPWuhDWqxE4cNDTdQGSgI7l092izbpQO5x+Rv1iMjtpBx/Cg1it55U6rwK2QCFX6HSAww9EtSoxA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sitko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

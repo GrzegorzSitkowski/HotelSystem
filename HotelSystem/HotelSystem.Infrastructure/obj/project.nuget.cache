@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PYR01874PcKRhSxsEp61Rzd2r6RzzFt9Elj7b/2TZWE3zyQS9pHFcM6PKMqIq8R6bjgRjdOpg1Jwa3HpAuWGpg==",
+  "dgSpecHash": "elFzcHcZASVtklCrn2AgMP/TEMcmMwh4U0IQcFSKH1IGQ38zlH3tIX/xo4eRYQLIFDSzGshW5QHmgsvQvlFRYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sitko\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.16\\microsoft.entityframeworkcore.5.0.16.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.16\\microsoft.entityframeworkcore.abstractions.5.0.16.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.16\\microsoft.entityframeworkcore.analyzers.5.0.16.nupkg.sha512",
