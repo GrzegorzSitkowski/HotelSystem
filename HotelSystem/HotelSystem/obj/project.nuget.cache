@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "diJeX/LbnahW3jXCQoldF6cDLgiggk8Oi121ZS5wlKc0KxCZmdFCTCXz//G1yEQ6eIwnqkVz9xDdI80f9+Lp6A==",
+  "dgSpecHash": "ly3cXhqLh5oI/Nq2X2hWKx6/mAHsOMQmAKxJgUV/IluGWGMJqhdmVc1FtMwLHgzOaBrQ4JyJImgltc+sVVlPfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sitko\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
