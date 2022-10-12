@@ -1,3 +1,4 @@
+using HotelSystem.Application;
 using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,6 +37,7 @@ namespace HotelSystem
                 //builder.WithOrigins("https://frontend.com");
             }));
 
+            services.AddApplication();
             services.AddPersistance(Configuration);
             services.AddControllers();
             services.AddSwaggerGen(c =>
