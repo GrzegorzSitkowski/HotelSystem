@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "elFzcHcZASVtklCrn2AgMP/TEMcmMwh4U0IQcFSKH1IGQ38zlH3tIX/xo4eRYQLIFDSzGshW5QHmgsvQvlFRYQ==",
+  "dgSpecHash": "aX7RjY950488DTVsJ4wZJ8Vq4EGA2j1TbAKJuntn/FDI3lZm44CLeiRbwHO1X/JadI/j4qAwL4+S7dnO0lQ9dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sitko\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.16\\microsoft.entityframeworkcore.5.0.16.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.16\\microsoft.entityframeworkcore.abstractions.5.0.16.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.16\\microsoft.entityframeworkcore.analyzers.5.0.16.nupkg.sha512",

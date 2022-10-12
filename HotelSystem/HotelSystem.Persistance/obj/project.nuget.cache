@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hdhx6jIYHLgDqPc44GV3urWQdJCk3vmyf+S14UvFuQBHfW1tN1ajYlaGBZ16sJXxGABewyLSldcEU7HbUHreCw==",
+  "dgSpecHash": "8C/IFYAY9NPud7VAJJoMWYkMwICYv9nTQRRe+CcmEX4YRMurFKlaCybQNh/wrweQJSkw1FCl+QXy6rKddc5QXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Persistance\\HotelSystem.Persistance.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sitko\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
