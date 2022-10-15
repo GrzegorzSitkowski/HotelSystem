@@ -27,7 +27,7 @@ namespace HotelSystem.Application.Rooms.Commands.CreateRoom
                 Price = request.Price,
                 Avability = request.Avability,
                 Description = request.Description
-            }
+            };
 
             _context.Rooms.Add(room);
             await _context.SaveChangesAsync(cancellationToken);
