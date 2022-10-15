@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Rooms.Commands.CreateRoom;
+using HotelSystem.Application.Rooms.Queries.GetRoomDetail;
 using HotelSystem.Persistance;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -26,6 +27,13 @@ namespace HotelSystem.Api.Controllers
         {
             var result = await Mediator.Send(command);
             return Ok(result);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<RoomDetailVm>> GetRoom(int id)
+        {
+            var vm = await Mediator.Send(new GetRoomDetailQuery() { Id = id });
+            return vm;
         }
     }
 }
