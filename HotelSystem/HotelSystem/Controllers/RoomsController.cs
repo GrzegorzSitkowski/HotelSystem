@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Rooms.Commands.CreateRoom;
+using HotelSystem.Application.Rooms.Commands.UpdateRoom;
 using HotelSystem.Application.Rooms.Queries.GetRoomDetail;
 using HotelSystem.Persistance;
 using MediatR;
@@ -42,6 +43,13 @@ namespace HotelSystem.Api.Controllers
         {
             var rooms = await _context.Rooms.AsNoTracking().Where(p => p.StatusId == 1 && p.Avability == true).ToListAsync();
             return Ok(rooms);
+        }
+
+       [HttpPut("{id}")]
+       public async Task<IActionResult> UpdateRoom(UpdateRoomCommand command)
+        {
+            var room = await Mediator.Send(command);
+            return Ok(room);
         }
     }
 }
