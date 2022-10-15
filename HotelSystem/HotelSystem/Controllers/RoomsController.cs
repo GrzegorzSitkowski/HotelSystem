@@ -4,6 +4,7 @@ using HotelSystem.Persistance;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,13 @@ namespace HotelSystem.Api.Controllers
         {
             var vm = await Mediator.Send(new GetRoomDetailQuery() { Id = id });
             return vm;
+        }
+
+       [HttpGet]
+       public async Task<ActionResult<RoomDetailVm>> GetRooms()
+        {
+            var rooms = await _context.Rooms.AsNoTracking().Where(p => p.StatusId == 1 && p.Avability == true).ToListAsync();
+            return Ok(rooms);
         }
     }
 }
