@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Rooms.Commands.CreateRoom;
+using HotelSystem.Application.Rooms.Commands.DeleteRoom;
 using HotelSystem.Application.Rooms.Commands.UpdateRoom;
 using HotelSystem.Application.Rooms.Queries.GetRoomDetail;
 using HotelSystem.Persistance;
@@ -49,6 +50,13 @@ namespace HotelSystem.Api.Controllers
        public async Task<IActionResult> UpdateRoom(UpdateRoomCommand command)
         {
             var room = await Mediator.Send(command);
+            return Ok(room);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteRoom(int id)
+        {
+            var room = await Mediator.Send(new DeleteRoomCommand() {Id = id});
             return Ok(room);
         }
     }
