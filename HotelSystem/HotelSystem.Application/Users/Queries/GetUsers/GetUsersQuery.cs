@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Application.Users.Queries.GetUsers
 {
-    public class GetUsersHandler : IRequest<UsersVm>
+    public class GetUsersQuery : IRequest<UsersVm>
     {
     }
 }
