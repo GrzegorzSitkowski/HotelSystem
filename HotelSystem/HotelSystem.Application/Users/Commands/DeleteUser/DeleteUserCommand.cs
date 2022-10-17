@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Application.Users.Commands.DeleteUser
 {
-    public class DeleteUserCommand : IRequest<int>
+    public class DeleteUserCommand : IRequest
     {
         public int Id { get; set; }
     }
