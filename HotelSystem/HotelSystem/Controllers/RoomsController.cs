@@ -32,7 +32,7 @@ namespace HotelSystem.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<RoomDetailVm>> GetRoom(int id)
+        public async Task<ActionResult<RoomDetailVm>> GetRoomDetail(int id)
         {
             var vm = await Mediator.Send(new GetRoomDetailQuery() { Id = id });
             return vm;
