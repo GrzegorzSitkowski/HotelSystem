@@ -15,11 +15,17 @@ namespace HotelSystem.Persistance
     public class HotelDbContext : DbContext, IHotelDbContext
     {
         private readonly IDateTime _dateTime;
+
+        public HotelDbContext(DbContextOptions<HotelDbContext> options) : base(options)
+        {
+
+        }
+
         public HotelDbContext(DbContextOptions<HotelDbContext> options, IDateTime dateTime) : base(options)
         {
             _dateTime = dateTime;
         }
-
+     
         public DbSet<Amenities> Amenities { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Room> Rooms { get; set; }
