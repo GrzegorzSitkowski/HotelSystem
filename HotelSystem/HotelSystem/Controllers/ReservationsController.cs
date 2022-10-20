@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Reservations.Commands.CreateReservation;
+using HotelSystem.Application.Reservations.Commands.UpdateReservation;
 using HotelSystem.Application.Reservations.Queries.GetReservationDetail;
 using HotelSystem.Application.Reservations.Queries.GetReservations;
 using HotelSystem.Persistance;
@@ -40,6 +41,13 @@ namespace HotelSystem.Api.Controllers
         {
             var reservations = await _context.Reservations.AsNoTracking().Where(p => p.StatusId == 1).ToListAsync();
             return Ok(reservations);
+        }
+
+        [HttpPut("{id")]
+        public async Task<IActionResult> UpdateReseravtion(UpdateReservationCommand command)
+        {
+            var reservation = await Mediator.Send(command);
+            return Ok(reservation);
         }
         
     }
