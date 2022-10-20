@@ -1,4 +1,5 @@
-﻿using HotelSystem.Persistance;
+﻿using HotelSystem.Application.Reservations.Commands.CreateReservation;
+using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,13 @@ namespace HotelSystem.Api.Controllers
         public ReservationsController(HotelDbContext context)
         {
             _context = context;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddReservation(CreateReservationCommand command)
+        {
+            var result = await Mediator.Send(command);
+            return Ok(result);
         }
         
     }
