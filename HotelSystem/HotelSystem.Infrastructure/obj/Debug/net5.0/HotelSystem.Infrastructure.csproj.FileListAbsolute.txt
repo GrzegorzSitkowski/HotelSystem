@@ -10,3 +10,8 @@ C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.dll
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\ref\HotelSystem.Infrastructure.dll
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.pdb
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Application.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Application.pdb
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\bin\Debug\net5.0\HotelSystem.Domain.pdb
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem.Infrastructure\obj\Debug\net5.0\HotelSystem.Infrastructure.csproj.CopyComplete
