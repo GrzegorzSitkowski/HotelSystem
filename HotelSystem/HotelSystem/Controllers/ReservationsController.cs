@@ -44,14 +44,14 @@ namespace HotelSystem.Api.Controllers
             return Ok(reservations);
         }
 
-        [HttpPut("{id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateReseravtion(UpdateReservationCommand command)
         {
             var reservation = await Mediator.Send(command);
             return Ok(reservation);
         }
 
-        [HttpDelete("{id")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteReservation(int id)
         {
             var reservation = await Mediator.Send(new DeleteReservationCommand() { Id = id });

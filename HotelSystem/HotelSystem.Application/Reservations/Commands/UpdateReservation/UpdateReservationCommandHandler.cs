@@ -23,6 +23,7 @@ namespace HotelSystem.Application.Reservations.Commands.UpdateReservation
             var reservation = await _context.Reservations.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
 
             reservation.Id = request.Id;
+            reservation.Price = request.Price;
             reservation.Mail = request.Mail;
             reservation.CheckIn = request.CheckOut;
             reservation.Payment = request.Payment;
