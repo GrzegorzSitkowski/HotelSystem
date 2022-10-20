@@ -2,6 +2,7 @@
 using HotelSystem.Application.Rooms.Commands.DeleteRoom;
 using HotelSystem.Application.Rooms.Commands.UpdateRoom;
 using HotelSystem.Application.Rooms.Queries.GetRoomDetail;
+using HotelSystem.Application.Rooms.Queries.GetRooms;
 using HotelSystem.Persistance;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -39,7 +40,7 @@ namespace HotelSystem.Api.Controllers
         }
 
        [HttpGet]
-       public async Task<ActionResult<RoomDetailVm>> GetRooms()
+       public async Task<ActionResult<RoomsVm>> GetRooms()
         {
             var rooms = await _context.Rooms.AsNoTracking().Where(p => p.StatusId == 1 && p.Avability == true).ToListAsync();
             return Ok(rooms);
