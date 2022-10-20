@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Reservations.Commands.CreateReservation;
+using HotelSystem.Application.Reservations.Commands.DeleteReservation;
 using HotelSystem.Application.Reservations.Commands.UpdateReservation;
 using HotelSystem.Application.Reservations.Queries.GetReservationDetail;
 using HotelSystem.Application.Reservations.Queries.GetReservations;
@@ -47,6 +48,13 @@ namespace HotelSystem.Api.Controllers
         public async Task<IActionResult> UpdateReseravtion(UpdateReservationCommand command)
         {
             var reservation = await Mediator.Send(command);
+            return Ok(reservation);
+        }
+
+        [HttpDelete("{id")]
+        public async Task<ActionResult> DeleteReservation(int id)
+        {
+            var reservation = await Mediator.Send(new DeleteReservationCommand() { Id = id });
             return Ok(reservation);
         }
         
