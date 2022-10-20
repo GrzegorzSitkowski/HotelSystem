@@ -1,7 +1,9 @@
 ﻿using HotelSystem.Application.Reservations.Commands.CreateReservation;
 using HotelSystem.Application.Reservations.Queries.GetReservationDetail;
+using HotelSystem.Application.Reservations.Queries.GetReservations;
 using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +33,13 @@ namespace HotelSystem.Api.Controllers
         {
             var vm = await Mediator.Send(new GetReservationDetailQuery() { Id = id });
             return vm;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<ReservationsVm>> GetReseravtions()
+        {
+            var reservations = await _context.Reservations.AsNoTracking().Where(p => p.StatusId == 1).ToListAsync();
+            return Ok(reservations);
         }
         
     }
