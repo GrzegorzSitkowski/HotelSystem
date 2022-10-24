@@ -21,7 +21,7 @@ namespace HotelSystem.Application.Rooms.Commands.CreateRoom
         public async Task<int> Handle(CreateRoomCommand request, CancellationToken cancellationToken)
         {
             Room room = new()
-            {
+            {   
                 Name = request.Name,
                 Capacity = request.Capacity,
                 Price = request.Price,
