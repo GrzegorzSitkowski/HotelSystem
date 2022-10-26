@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.component';
 import { AddRoomComponent } from './components/rooms/add-room/add-room.component';
 import { FormsModule } from '@angular/forms';
+import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomsListComponent,
-    AddRoomComponent
+    AddRoomComponent,
+    EditRoomComponent
   ],
   imports: [
     BrowserModule,
