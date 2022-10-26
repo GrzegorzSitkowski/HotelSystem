@@ -47,4 +47,13 @@ export class EditRoomComponent implements OnInit {
     });
   }
 
+  deleteRoom(id: string){
+    this.roomService.deleteRoom(id)
+    .subscribe({
+      next:(response) => {
+        this.router.navigate(['rooms']);
+      }     
+    });
+  }
+
 }
