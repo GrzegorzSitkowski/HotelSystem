@@ -23,4 +23,8 @@ export class RoomsService {
   getRoom(id: string): Observable<Room>{
     return this.http.get<Room>(this.baseApiUrl + '/api/rooms/' + id);
   }
+
+  updateRoom(id: string, updateRoomRequest: Room): Observable<Room>{
+    return this.http.put<Room>(this.baseApiUrl + '/api/rooms/' + id, updateRoomRequest);
+  }
 }
