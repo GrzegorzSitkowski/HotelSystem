@@ -1,1 +1,25 @@
-<p>list-reservations works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Reservations</h1>
+
+    <table class="table table-dark table-striped" *ngIf="reservations && reservations.length >0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Mail</th>
+                <th>CheckIn</th>
+                <th>CheckOut</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservation of reservations">
+                <td>{{ reservation.id }}</td>
+                <td>{{ reservation.mail  }}</td>
+                <td>{{ reservation.checkIn | date:'longDate'  }}</td>
+                <td>{{ reservation.checkOut | date:'longDate' }}</td>
+                <td><a [routerLink]="['/reservations', 'edit', reservation.id]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!reservations || reservations.length <= 0">No rooms found.</p>
+</div>
