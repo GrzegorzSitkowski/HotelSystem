@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
 import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
 import { AddReservationComponent } from './components/reservations/add-reservation/add-reservation.component';
+import { EditReservationComponent } from './components/reservations/edit-reservation/edit-reservation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddReservationComponent } from './components/reservations/add-reservati
     AddRoomComponent,
     EditRoomComponent,
     ListReservationsComponent,
-    AddReservationComponent
+    AddReservationComponent,
+    EditReservationComponent
   ],
   imports: [
     BrowserModule,

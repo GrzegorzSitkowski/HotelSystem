@@ -18,4 +18,16 @@ export class ReservationsService {
   addReservation(addReservationRequest: Reservation): Observable<Reservation>{
     return this.http.post<Reservation>(this.baseApiUrl + '/api/reservations', addReservationRequest);
   }
+
+  getReservation(id: string): Observable<Reservation>{
+    return this.http.get<Reservation>(this.baseApiUrl + '/api/reservations/' + id);
+  }
+
+  updateReservation(id: string, updateReservationRequest: Reservation): Observable<Reservation>{
+    return this.http.put<Reservation>(this.baseApiUrl + '/api/reservations/' + id, updateReservationRequest);
+  }
+
+  deleteReservation(id: string): Observable<Reservation>{
+    return this.http.delete<Reservation>(this.baseApiUrl + '/api/reservations/' + id);
+  }
 }
