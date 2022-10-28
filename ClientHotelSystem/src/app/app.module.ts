@@ -8,13 +8,15 @@ import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.com
 import { AddRoomComponent } from './components/rooms/add-room/add-room.component';
 import { FormsModule } from '@angular/forms';
 import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
+import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomsListComponent,
     AddRoomComponent,
-    EditRoomComponent
+    EditRoomComponent,
+    ListReservationsComponent
   ],
   imports: [
     BrowserModule,
