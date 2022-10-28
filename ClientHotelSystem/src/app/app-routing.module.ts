@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddReservationComponent } from './components/reservations/add-reservation/add-reservation.component';
 import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
 import { AddRoomComponent } from './components/rooms/add-room/add-room.component';
 import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'reservations',
     component: ListReservationsComponent
+  },
+  {
+    path: 'reservations/add',
+    component: AddReservationComponent
   }
 ];
 
