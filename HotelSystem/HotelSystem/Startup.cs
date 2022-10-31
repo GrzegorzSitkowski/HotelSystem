@@ -72,7 +72,7 @@ namespace HotelSystem
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
             app.UseAuthorization();
 

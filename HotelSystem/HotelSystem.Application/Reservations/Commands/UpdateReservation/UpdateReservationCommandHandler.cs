@@ -25,7 +25,8 @@ namespace HotelSystem.Application.Reservations.Commands.UpdateReservation
             reservation.Id = request.Id;
             reservation.Price = request.Price;
             reservation.Mail = request.Mail;
-            reservation.CheckIn = request.CheckOut;
+            reservation.CheckIn = request.CheckIn;
+            reservation.CheckOut = request.CheckOut;
             reservation.Payment = request.Payment;
 
             await _context.SaveChangesAsync(cancellationToken);
