@@ -19,6 +19,7 @@ namespace HotelSystem.Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddTransient(typeof(IRequestPreProcessor<>), typeof(LoggingBehaviour<>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerfomanceBehaviour<,>));
             return services;
         }
     }
