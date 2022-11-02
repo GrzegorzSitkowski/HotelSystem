@@ -9,5 +9,15 @@ namespace HotelSystem.Application.Reservations.Commands.CreateReservation
 {
     public class CreateReservationCommandValidator : AbstractValidator<CreateReservationCommand>
     {
+        public CreateReservationCommandValidator()
+        {
+            RuleFor(x => x.Price).NotEmpty();
+            RuleFor(x => x.Mail).NotEmpty().MaximumLength(50);
+            RuleFor(x => x.CheckIn).NotEmpty();
+            RuleFor(x => x.CheckOut).NotEmpty();
+            RuleFor(x => x.UserId).NotEmpty();
+            RuleFor(x => x.RoomId).NotEmpty();
+        }
+            
     }
 }
