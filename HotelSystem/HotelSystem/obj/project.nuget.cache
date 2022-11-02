@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wqnSyxtoWKWbUtmHyfmCqPZDhwWcVSy7U7NaUrvLtLzXxYp56zKClzK2qP7I3EzKK07xRQwefH4iUwlzzlQNbA==",
+  "dgSpecHash": "anZwtYzYqsXx2bgVk89z+P/LnB0dkMPRnFfH+PV4Cn7F0xzMK1lSWklNOFljUq98mJLaRk9Xa89seXJA3rmQsA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sitko\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.2\\fluentvalidation.dependencyinjectionextensions.11.2.2.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
