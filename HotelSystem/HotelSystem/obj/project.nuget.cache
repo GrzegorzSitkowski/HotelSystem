@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L6P5RrnD8LrXm5/N8ulP3YCXo1E/LfSDynSWETJ3SdEWAEMTVjbB4qD0N2mO7gtk1P3RnixMOaLSfVqEyrWX9w==",
+  "dgSpecHash": "WRQs25wCpZiSNOsCw+DXT3amUj+Kpd1CjRlw8dULceW2AQQ+XC+AFwolwRFFtx14uYVRGhlvYzn6+pWi4FiS1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
   "expectedPackageFiles": [
@@ -57,6 +57,9 @@
     "C:\\Users\\sitko\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.aspnetcore\\6.0.1\\serilog.aspnetcore.6.0.1.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\serilog.enrichers.environment\\2.2.0\\serilog.enrichers.environment.2.2.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\serilog.enrichers.process\\2.0.2\\serilog.enrichers.process.2.0.2.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\serilog.enrichers.thread\\3.1.0\\serilog.enrichers.thread.3.1.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.extensions.hosting\\5.0.1\\serilog.extensions.hosting.5.0.1.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.extensions.logging\\3.1.0\\serilog.extensions.logging.3.1.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.formatting.compact\\1.1.0\\serilog.formatting.compact.1.1.0.nupkg.sha512",

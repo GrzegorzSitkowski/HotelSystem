@@ -769,6 +769,42 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Serilog.Enrichers.Environment/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Enrichers.Environment.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Enrichers.Environment.dll": {}
+        }
+      },
+      "Serilog.Enrichers.Process/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Enrichers.Process.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Enrichers.Process.dll": {}
+        }
+      },
+      "Serilog.Enrichers.Thread/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Enrichers.Thread.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Enrichers.Thread.dll": {}
+        }
+      },
       "Serilog.Extensions.Hosting/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -3221,6 +3257,56 @@
         "lib/netstandard2.1/Serilog.AspNetCore.xml",
         "serilog.aspnetcore.6.0.1.nupkg.sha512",
         "serilog.aspnetcore.nuspec"
+      ]
+    },
+    "Serilog.Enrichers.Environment/2.2.0": {
+      "sha512": "DMrj3A4l65kc4JouQyZjjFv7N58Y7lGsB81kSzorTwUGeI2wrTy7CVwSOfG90/Pcu/HV5bwGrUmxDZ38pON+5Q==",
+      "type": "package",
+      "path": "serilog.enrichers.environment/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Enrichers.Environment.dll",
+        "lib/netstandard1.3/Serilog.Enrichers.Environment.dll",
+        "lib/netstandard1.5/Serilog.Enrichers.Environment.dll",
+        "lib/netstandard2.0/Serilog.Enrichers.Environment.dll",
+        "serilog.enrichers.environment.2.2.0.nupkg.sha512",
+        "serilog.enrichers.environment.nuspec"
+      ]
+    },
+    "Serilog.Enrichers.Process/2.0.2": {
+      "sha512": "T9EjKKLsL6qC/3eOLUAKEPBLEqPDmt5BLXaQdPMaxJzuex+MeXA8DuAiPboUaftp3kbnCN4ZgZpDvs+Fa7OHuw==",
+      "type": "package",
+      "path": "serilog.enrichers.process/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Enrichers.Process.dll",
+        "lib/net45/Serilog.Enrichers.Process.pdb",
+        "lib/netstandard1.3/Serilog.Enrichers.Process.dll",
+        "lib/netstandard1.3/Serilog.Enrichers.Process.pdb",
+        "lib/netstandard2.0/Serilog.Enrichers.Process.dll",
+        "lib/netstandard2.0/Serilog.Enrichers.Process.pdb",
+        "serilog-enricher-nuget.png",
+        "serilog.enrichers.process.2.0.2.nupkg.sha512",
+        "serilog.enrichers.process.nuspec"
+      ]
+    },
+    "Serilog.Enrichers.Thread/3.1.0": {
+      "sha512": "85lWsGRJpRxvKT6j/H67no55SUBsBIvp556TKuBTGhjtoPeq+L7j/sDWbgAtvT0p7u7/phJyX6j35PQ4Vtqw0g==",
+      "type": "package",
+      "path": "serilog.enrichers.thread/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Enrichers.Thread.dll",
+        "lib/net45/Serilog.Enrichers.Thread.xml",
+        "lib/netstandard1.0/Serilog.Enrichers.Thread.dll",
+        "lib/netstandard1.0/Serilog.Enrichers.Thread.xml",
+        "lib/netstandard2.0/Serilog.Enrichers.Thread.dll",
+        "lib/netstandard2.0/Serilog.Enrichers.Thread.xml",
+        "serilog.enrichers.thread.3.1.0.nupkg.sha512",
+        "serilog.enrichers.thread.nuspec"
       ]
     },
     "Serilog.Extensions.Hosting/5.0.1": {
@@ -7061,6 +7147,9 @@
       "Microsoft.Extensions.DependencyInjection >= 6.0.1",
       "Serilog >= 2.12.0",
       "Serilog.AspNetCore >= 6.0.1",
+      "Serilog.Enrichers.Environment >= 2.2.0",
+      "Serilog.Enrichers.Process >= 2.0.2",
+      "Serilog.Enrichers.Thread >= 3.1.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -7132,6 +7221,18 @@
           "Serilog.AspNetCore": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "Serilog.Enrichers.Environment": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Serilog.Enrichers.Process": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
+          "Serilog.Enrichers.Thread": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
