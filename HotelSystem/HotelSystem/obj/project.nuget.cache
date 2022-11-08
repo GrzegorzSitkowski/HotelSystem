@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WRQs25wCpZiSNOsCw+DXT3amUj+Kpd1CjRlw8dULceW2AQQ+XC+AFwolwRFFtx14uYVRGhlvYzn6+pWi4FiS1Q==",
+  "dgSpecHash": "SWToHVRPr79rn5efiqPdgnyoJ5UoVLF9RMzE6NztfQYTa3iZxvuVs3wrQ0eAL39fU2I5y61Cyblc1b0oO/G1pQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
   "expectedPackageFiles": [
@@ -67,6 +67,8 @@
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.sinks.console\\4.0.1\\serilog.sinks.console.4.0.1.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.sinks.debug\\2.0.0\\serilog.sinks.debug.2.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\serilog.sinks.periodicbatching\\3.1.0\\serilog.sinks.periodicbatching.3.1.0.nupkg.sha512",
+    "C:\\Users\\sitko\\.nuget\\packages\\serilog.sinks.seq\\5.2.1\\serilog.sinks.seq.5.2.1.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
