@@ -102,3 +102,5 @@ C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Serilog.Sinks.Console.dll
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Serilog.Sinks.Seq.dll
