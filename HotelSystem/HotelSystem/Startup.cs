@@ -1,11 +1,15 @@
+using HotelSystem.Api.Service;
 using HotelSystem.Application;
+using HotelSystem.Application.Interfaces;
 using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
@@ -45,6 +49,8 @@ namespace HotelSystem
             {
                 options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin());
             });
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(typeof(ICurrentUserService), typeof(CurrentUserService));
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
