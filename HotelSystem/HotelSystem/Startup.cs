@@ -41,9 +41,22 @@ namespace HotelSystem
             services.AddApplication();
             services.AddPersistance(Configuration);
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin());
+            });
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:5001";
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                    {
+                        ValidateAudience = false
+                    };
+                });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { 
+                c.SwaggerDoc("v1", new OpenApiInfo {
                     Title = "HotelSystem",
                     Version = "v1",
                     Description = "A simple web application.",
@@ -55,6 +68,17 @@ namespace HotelSystem
                 });
                 var filePath = Path.Combine(AppContext.BaseDirectory, "HotelSystem.mxl");
                 c.IncludeXmlComments(filePath);
+            });
+
+            services.AddHealthChecks();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ApiScope", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("scope", "api1");
+                });
             });
         }
 
@@ -80,7 +104,7 @@ namespace HotelSystem
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers().RequireAuthorization("ApiScope");
             });
         }
     }
