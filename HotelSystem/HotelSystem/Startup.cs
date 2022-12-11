@@ -1,3 +1,4 @@
+using HotelSystem.Api;
 using HotelSystem.Api.Service;
 using HotelSystem.Application;
 using HotelSystem.Application.Interfaces;
@@ -79,6 +80,7 @@ namespace HotelSystem
                         }
                     }
                 });
+                c.OperationFilter<AuthorizeCheckOperationFilter>();
                 c.SwaggerDoc("v1", new OpenApiInfo {
                     Title = "HotelSystem",
                     Version = "v1",
