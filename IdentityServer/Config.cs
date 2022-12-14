@@ -13,9 +13,9 @@ namespace IdentityServer
         public static IEnumerable<IdentityResource> IdentityResources =>
                    new IdentityResource[]
                    {
-                new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
-                new IdentityResource(name: "user", userClaims: new[] {JwtClaimTypes.Email})
+                        new IdentityResources.OpenId(),
+                        new IdentityResources.Profile(),
+                        new IdentityResource(name: "user", userClaims: new[] {JwtClaimTypes.Email})
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>

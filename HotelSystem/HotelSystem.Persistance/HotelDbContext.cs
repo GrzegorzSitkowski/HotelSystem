@@ -51,8 +51,8 @@ namespace HotelSystem.Persistance
                         entry.Entity.StatusId = 1;
                         break;
                     case EntityState.Modified:
-                        entry.Entity.ModifiedBy = _userService.Email;
                         entry.Entity.Modified = DateTime.Now;
+                        entry.Entity.ModifiedBy = _userService.Email;                       
                         break;
                     case EntityState.Deleted:
                         entry.Entity.ModifiedBy = _userService.Email;

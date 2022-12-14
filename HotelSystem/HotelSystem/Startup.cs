@@ -51,7 +51,7 @@ namespace HotelSystem
                 options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin());
             });
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped(typeof(ICurrentUserService), typeof(CurrentUserService));
+            services.TryAddScoped(typeof(ICurrentUserService), typeof(CurrentUserService));
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {

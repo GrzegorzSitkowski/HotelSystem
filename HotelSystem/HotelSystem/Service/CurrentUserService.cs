@@ -17,7 +17,7 @@ namespace HotelSystem.Api.Service
         {
             var email = httpContextAccessor.HttpContext?.User?.FindFirstValue(JwtClaimTypes.Email);
 
-            Email = Email;
+            Email = email;
 
             IsAuthenticated = !string.IsNullOrEmpty(email);
         }
