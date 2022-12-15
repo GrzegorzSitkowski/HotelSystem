@@ -8,7 +8,7 @@ namespace HotelSystem.Application.Interfaces
 {
     public interface ICurrentUserService
     {
-        string Email { get; set; }
+        string userName { get; set; }
         bool IsAuthenticated { get; set; }
     }
 }

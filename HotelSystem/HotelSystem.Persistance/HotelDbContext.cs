@@ -46,19 +46,19 @@ namespace HotelSystem.Persistance
                 switch(entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.CreatedBy = _userService.Email;
+                        entry.Entity.CreatedBy = string.Empty;
                         entry.Entity.Created = DateTime.Now;
                         entry.Entity.StatusId = 1;
                         break;
                     case EntityState.Modified:
                         entry.Entity.Modified = DateTime.Now;
-                        entry.Entity.ModifiedBy = _userService.Email;                       
+                        entry.Entity.ModifiedBy = string.Empty;                       
                         break;
                     case EntityState.Deleted:
-                        entry.Entity.ModifiedBy = _userService.Email;
+                        entry.Entity.ModifiedBy = string.Empty;
                         entry.Entity.Modified = DateTime.Now;
                         entry.Entity.Inactivated = DateTime.Now;
-                        entry.Entity.InactivatedBy = _userService.Email;
+                        entry.Entity.InactivatedBy = string.Empty;
                         entry.Entity.StatusId = 0;
                         entry.State = EntityState.Modified;
                         break;

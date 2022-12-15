@@ -11,15 +11,15 @@ namespace HotelSystem.Api.Service
 {
     public class CurrentUserService : ICurrentUserService
     {
-        public string Email { get; set; }
+        public string userName { get; set; }
         public bool IsAuthenticated { get; set; }
         public CurrentUserService(IHttpContextAccessor httpContextAccessor)
         {
-            var email = httpContextAccessor.HttpContext?.User?.FindFirstValue(JwtClaimTypes.Email);
+            var _userName = httpContextAccessor.HttpContext?.User?.FindFirstValue(JwtClaimTypes.Name);
 
-            Email = email;
+            userName = _userName;
 
-            IsAuthenticated = !string.IsNullOrEmpty(email);
+            IsAuthenticated = !string.IsNullOrEmpty(_userName);
         }
     }
 }
