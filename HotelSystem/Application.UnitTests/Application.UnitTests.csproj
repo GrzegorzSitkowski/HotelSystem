@@ -23,4 +23,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelSystem.Application\HotelSystem.Application.csproj" />
+  </ItemGroup>
+
 </Project>
