@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+xLvtwxVh3UjQAZ/REKl0zxnT/t0m0VU3/VuMWixH1rCgPdFEB8XQA2E26Yluh0zU5fqkmL52JV+oh7AwFv2kg==",
+  "dgSpecHash": "wq2Z1cGK2oDKbchx+mYGJbQi79WggrtZPrRf2fBQKgvAdb5T6KJi65TbKpl3kMNoSgjV4Yu59e0BgfImivZS/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\Application.UnitTests\\Application.UnitTests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sitko\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\sitko\\.nuget\\packages\\diffengine\\10.0.0\\diffengine.10.0.0.nupkg.sha512",

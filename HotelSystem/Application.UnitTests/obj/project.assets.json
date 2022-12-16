@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "AutoMapper/12.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {}
+        }
+      },
       "Castle.Core/5.1.0": {
         "type": "package",
         "dependencies": {
@@ -1986,6 +1998,21 @@
     }
   },
   "libraries": {
+    "AutoMapper/12.0.0": {
+      "sha512": "0Rmg0zI5AFu1O/y//o9VGyhxKjhggWpk9mOA1tp0DEVx40c61bs+lnQv+0jUq8XbniF7FKgIVvI1perqiMtLrA==",
+      "type": "package",
+      "path": "automapper/12.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.12.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
     "Castle.Core/5.1.0": {
       "sha512": "31UJpTHOiWq95CDOHazE3Ub/hE/PydNWsJMwnEVTqFFP4WhAugwpaVGxzOxKgNeSUUeqS2W6lxV+q7u1pAOfXg==",
       "type": "package",
@@ -6962,6 +6989,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AutoMapper >= 12.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.17",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Moq >= 4.18.3",
@@ -7015,6 +7043,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[5.0.17, )"
