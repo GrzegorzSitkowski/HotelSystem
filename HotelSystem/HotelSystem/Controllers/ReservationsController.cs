@@ -4,6 +4,7 @@ using HotelSystem.Application.Reservations.Commands.UpdateReservation;
 using HotelSystem.Application.Reservations.Queries.GetReservationDetail;
 using HotelSystem.Application.Reservations.Queries.GetReservations;
 using HotelSystem.Persistance;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 namespace HotelSystem.Api.Controllers
 {
     [Route("api/reservations")]
+    [Authorize]
     public class ReservationsController : BaseController
     {
         private readonly HotelDbContext _context;

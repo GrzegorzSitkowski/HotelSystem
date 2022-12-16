@@ -15,15 +15,17 @@ namespace HotelSystem.Persistance
     public class HotelDbContext : DbContext, IHotelDbContext
     {
         private readonly IDateTime _dateTime;
+        private readonly ICurrentUserService _userService;
 
         public HotelDbContext(DbContextOptions<HotelDbContext> options) : base(options)
         {
 
         }
 
-        public HotelDbContext(DbContextOptions<HotelDbContext> options, IDateTime dateTime) : base(options)
+        public HotelDbContext(DbContextOptions<HotelDbContext> options, IDateTime dateTime, ICurrentUserService userService) : base(options)
         {
             _dateTime = dateTime;
+            _userService = userService;
         }
      
         public DbSet<Amenities> Amenities { get; set; }
@@ -49,8 +51,8 @@ namespace HotelSystem.Persistance
                         entry.Entity.StatusId = 1;
                         break;
                     case EntityState.Modified:
-                        entry.Entity.ModifiedBy = string.Empty;
                         entry.Entity.Modified = DateTime.Now;
+                        entry.Entity.ModifiedBy = string.Empty;                       
                         break;
                     case EntityState.Deleted:
                         entry.Entity.ModifiedBy = string.Empty;

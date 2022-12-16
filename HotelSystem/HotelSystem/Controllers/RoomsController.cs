@@ -5,6 +5,7 @@ using HotelSystem.Application.Rooms.Queries.GetRoomDetail;
 using HotelSystem.Application.Rooms.Queries.GetRooms;
 using HotelSystem.Persistance;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ using System.Threading.Tasks;
 namespace HotelSystem.Api.Controllers
 {
     [Route("api/rooms")]
+    [Authorize]
     public class RoomsController : BaseController
     {
         private readonly HotelDbContext _context;
