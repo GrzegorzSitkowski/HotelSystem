@@ -59,5 +59,11 @@ namespace Application.UnitTests.Common
             context.SaveChanges();
             return mock;
         }
+
+        public static void Destroy(HotelDbContext context)
+        {
+            context.Database.EnsureDeleted();
+            context.Dispose();
+        }
     }
 }
