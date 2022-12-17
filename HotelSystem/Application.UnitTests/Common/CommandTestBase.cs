@@ -8,5 +8,6 @@ namespace Application.UnitTests.Common
 {
     class CommandTestBase
     {
+        
     }
 }
