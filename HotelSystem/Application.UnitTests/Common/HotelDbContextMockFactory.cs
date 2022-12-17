@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Interfaces;
+using HotelSystem.Domain.Entities;
 using HotelSystem.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Moq;
@@ -30,6 +31,17 @@ namespace Application.UnitTests.Common
             var context = mock.Object;
 
             context.Database.EnsureCreated();
+
+            var reservation = new Reservation()
+            {
+                Id = 1,
+                Price = 300,
+                Mail = "mail@example.com",
+                Payment = true,
+                UserId = 1,
+                RoomId = 1,
+                StatusId = 1
+            };
         }
     }
 }
