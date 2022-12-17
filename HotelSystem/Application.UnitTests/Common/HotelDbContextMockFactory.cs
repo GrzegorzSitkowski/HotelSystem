@@ -55,6 +55,9 @@ namespace Application.UnitTests.Common
                 StatusId = 1
             };
             context.Rooms.Add(room);
+
+            context.SaveChanges();
+            return mock;
         }
     }
 }
