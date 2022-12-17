@@ -42,6 +42,19 @@ namespace Application.UnitTests.Common
                 RoomId = 1,
                 StatusId = 1
             };
+            context.Reservations.Add(reservation);
+
+            var room = new Room()
+            {
+                Id = 1,
+                Name = "Double room",
+                Capacity = 2,
+                Price = 260,
+                Avability = true,
+                Description = "Room for two.",
+                StatusId = 1
+            };
+            context.Rooms.Add(room);
         }
     }
 }
