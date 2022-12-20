@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Persistance
 {
-    public class HotelDbContextFactory : DesignTimeDbContextFactoryBase<HotelDbContext>
+    public class HotelDbContextFactoryMock : DesignTimeDbContextFactoryBase<HotelDbContext>
     {
         protected override HotelDbContext CreateNewInstance(DbContextOptions<HotelDbContext> options)
         {
