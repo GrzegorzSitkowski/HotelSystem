@@ -32,21 +32,21 @@ namespace Application.UnitTests.Common
 
             context.Database.EnsureCreated();
 
-            var reservation = new Reservation()
+            var reservation = new HotelSystem.Domain.Entities.Reservation()
             {
-                Id = 1,
+                Id = 2,
                 Price = 300,
                 Mail = "mail@example.com",
                 Payment = true,
                 UserId = 1,
-                RoomId = 1,
+                RoomId = 15,
                 StatusId = 1
             };
             context.Reservations.Add(reservation);
 
             var room = new Room()
             {
-                Id = 1,
+                Id = 15,
                 Name = "Double room",
                 Capacity = 2,
                 Price = 260,
