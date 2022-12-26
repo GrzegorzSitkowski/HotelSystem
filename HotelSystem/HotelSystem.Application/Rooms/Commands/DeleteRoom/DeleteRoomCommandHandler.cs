@@ -27,5 +27,10 @@ namespace HotelSystem.Application.Rooms.Commands.DeleteRoom
 
             return Unit.Value;
         }
+
+        public object Handle(DeleteRoomCommand command, object none)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
