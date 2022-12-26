@@ -44,7 +44,7 @@ namespace Application.UnitTests.Common
             };
             context.Reservations.Add(reservation);
 
-            var room = new Room()
+            var room = new HotelSystem.Domain.Entities.Room()
             {
                 Id = 15,
                 Name = "Double room",
