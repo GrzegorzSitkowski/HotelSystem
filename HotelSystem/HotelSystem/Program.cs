@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -6,6 +7,7 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace HotelSystem
@@ -21,7 +23,7 @@ namespace HotelSystem
             try
             {
                 Log.Information("Application is starting up");
-                CreateHostBuilder(args).Build().Run();
+                CreateHostBuilder(args).UseSerilog().Build().Run();
             }
             catch (Exception ex)
             {
@@ -35,12 +37,28 @@ namespace HotelSystem
             
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-            .UseSerilog()
-                .ConfigureWebHostDefaults(webBuilder =>
+        public static IWebHostBuilder CreateHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hostingContext, config) =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    var env = hostingContext.HostingEnvironment;
+                    config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.local.json", optional: true, reloadOnChange: true);
+
+                    if (env.IsDevelopment())
+                    {
+                        var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));
+                        config.AddUserSecrets(appAssembly, optional: true);
+                    }
+
+                    config.AddEnvironmentVariables();
+
+                    if (args != null)
+                    {
+                        config.AddCommandLine(args);
+                    }
+                })
+                .UseStartup<Startup>();
     }
 }
