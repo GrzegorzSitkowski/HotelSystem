@@ -32,7 +32,7 @@ namespace WebApi.IntegrationTests.Common
 
                     services.AddScoped<IHotelDbContext>(provider => provider.GetService<HotelDbContext>());
 
-                    var sp = services.BuildServiceProvider()
+                    var sp = services.BuildServiceProvider();
 
                     using var scope = sp.CreateScope();
                     var scopedService = scope.ServiceProvider;
@@ -43,7 +43,7 @@ namespace WebApi.IntegrationTests.Common
 
                     try
                     {
-
+                        Utilities.InitializeDbForTests(context);
                     }
                     catch(Exception ex)
                     {
@@ -51,6 +51,7 @@ namespace WebApi.IntegrationTests.Common
                             $"database with test messages. Error: {ex.Message}");
                     }
                 });
+
             }
             catch (Exception ex)
             {
