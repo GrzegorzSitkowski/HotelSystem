@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace WebApi.IntegrationTests.Common
@@ -45,18 +47,34 @@ namespace WebApi.IntegrationTests.Common
                     {
                         Utilities.InitializeDbForTests(context);
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         logger.LogError(ex, "An error accurred seeding the" +
                             $"database with test messages. Error: {ex.Message}");
                     }
-                });
+                })
+                    .UseSerilog()
+                    .UseEnvironment("Test");
 
             }
             catch (Exception ex)
             {
                 throw;
             }
+        }
+
+        public async Task<HttpClient> GetAuthenticatedClientAsync()
+        {
+            var client = CreateClient();
+
+            var token = await GetAccessTokenAsync(client, "alice", "Pass123$");
+            client.SetBearerToken(token);
+            return client;
+        }
+
+        private Task GetAccessTokenAsync(HttpClient client, string v1, string v2)
+        {
+            throw new NotImplementedException();
         }
     }
 }
