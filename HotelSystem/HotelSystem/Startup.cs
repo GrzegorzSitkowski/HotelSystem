@@ -25,12 +25,15 @@ namespace HotelSystem
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
         }
 
         public IConfiguration Configuration { get; }
+
+        public IWebHostEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -50,6 +53,12 @@ namespace HotelSystem
             {
                 options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin());
             });
+
+            if(Environment.IsEnvironment("Test"))
+            {
+
+            }
+
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.TryAddScoped(typeof(ICurrentUserService), typeof(CurrentUserService));
             services.AddAuthentication("Bearer")
