@@ -1,5 +1,6 @@
 ﻿using HotelSystem.Application.Interfaces;
 using HotelSystem.Persistance;
+using IdentityModel.Client;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
@@ -72,9 +73,31 @@ namespace WebApi.IntegrationTests.Common
             return client;
         }
 
-        private Task GetAccessTokenAsync(HttpClient client, string v1, string v2)
+        private async Task<string> GetAccessTokenAsync(HttpClient client, string userName, string password)
         {
-            throw new NotImplementedException();
+            var disco = await client.GetDiscoveryDocumentAsync();
+
+            if(disco.IsError)
+            {
+                throw new Exception(disco.Error);
+            }
+
+            var response = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
+            {
+                Address = disco.TokenEndpoint,
+                ClientId = "client",
+                ClientSecret = "secret",
+                Scope = "openid profile HotelSystem.ApiAPI api1",
+                UserName = userName,
+                Password = password
+            });
+
+            if(response.IsError)
+            {
+                throw new Exception(response.Error);
+            }
+
+            return response.AccessToken;
         }
     }
 }
