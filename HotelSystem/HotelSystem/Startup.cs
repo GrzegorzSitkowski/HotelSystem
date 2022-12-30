@@ -177,6 +177,10 @@ namespace HotelSystem
 
             app.UseRouting();
             app.UseAuthentication();
+            if(Environment.IsEnvironment("Test"))
+            {
+                app.UseIdentityServer();
+            }
             app.UseSerilogRequestLogging();
 
             app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
