@@ -9,17 +9,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B539727F-94EE-4DA5-AFB0-CF3140192251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelSystem.Application", "HotelSystem.Application\HotelSystem.Application.csproj", "{B180FC49-296F-4A0A-BEBE-1D4D2E713CF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSystem.Application", "HotelSystem.Application\HotelSystem.Application.csproj", "{B180FC49-296F-4A0A-BEBE-1D4D2E713CF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelSystem.Common", "HotelSystem.Common\HotelSystem.Common.csproj", "{94F351DE-076E-4388-BF66-2BD2E25239D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSystem.Common", "HotelSystem.Common\HotelSystem.Common.csproj", "{94F351DE-076E-4388-BF66-2BD2E25239D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelSystem.Domain", "HotelSystem.Domain\HotelSystem.Domain.csproj", "{614BC7B4-AEB9-4B92-9123-8B35A6E187EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSystem.Domain", "HotelSystem.Domain\HotelSystem.Domain.csproj", "{614BC7B4-AEB9-4B92-9123-8B35A6E187EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{46DA2A6F-6980-4457-BB51-3E881A1BB9F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelSystem.Infrastructure", "HotelSystem.Infrastructure\HotelSystem.Infrastructure.csproj", "{0AADAE61-0B1E-45BC-A56C-46EE3B6DAD6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSystem.Infrastructure", "HotelSystem.Infrastructure\HotelSystem.Infrastructure.csproj", "{0AADAE61-0B1E-45BC-A56C-46EE3B6DAD6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelSystem.Persistance", "HotelSystem.Persistance\HotelSystem.Persistance.csproj", "{0947F1A5-B864-402A-9215-51F714FF9600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelSystem.Persistance", "HotelSystem.Persistance\HotelSystem.Persistance.csproj", "{0947F1A5-B864-402A-9215-51F714FF9600}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1DEDBCDF-0B29-4095-ABAF-1C57811224C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.UnitTests", "Application.UnitTests\Application.UnitTests.csproj", "{BD9D2A32-8F99-43BE-8078-E6C2B4075613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.IntegrationTests", "WebApi.IntegrationTests\WebApi.IntegrationTests.csproj", "{186AB39D-6BBD-4657-B315-7A1EE820F21E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,14 @@ Global
 		{0947F1A5-B864-402A-9215-51F714FF9600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0947F1A5-B864-402A-9215-51F714FF9600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0947F1A5-B864-402A-9215-51F714FF9600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD9D2A32-8F99-43BE-8078-E6C2B4075613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9D2A32-8F99-43BE-8078-E6C2B4075613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9D2A32-8F99-43BE-8078-E6C2B4075613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9D2A32-8F99-43BE-8078-E6C2B4075613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186AB39D-6BBD-4657-B315-7A1EE820F21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186AB39D-6BBD-4657-B315-7A1EE820F21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186AB39D-6BBD-4657-B315-7A1EE820F21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186AB39D-6BBD-4657-B315-7A1EE820F21E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +76,8 @@ Global
 		{614BC7B4-AEB9-4B92-9123-8B35A6E187EF} = {B539727F-94EE-4DA5-AFB0-CF3140192251}
 		{0AADAE61-0B1E-45BC-A56C-46EE3B6DAD6F} = {46DA2A6F-6980-4457-BB51-3E881A1BB9F9}
 		{0947F1A5-B864-402A-9215-51F714FF9600} = {46DA2A6F-6980-4457-BB51-3E881A1BB9F9}
+		{BD9D2A32-8F99-43BE-8078-E6C2B4075613} = {1DEDBCDF-0B29-4095-ABAF-1C57811224C8}
+		{186AB39D-6BBD-4657-B315-7A1EE820F21E} = {1DEDBCDF-0B29-4095-ABAF-1C57811224C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D9FB59B-313F-4E49-97CA-7E7F00EE61A0}
