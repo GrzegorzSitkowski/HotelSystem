@@ -8,6 +8,7 @@ namespace WebApi.IntegrationTests.Common
 {
     public class Utilities
     {
+        
         public static void InitializeDbForTests(HotelDbContext context)
         {
             var reservation = new HotelSystem.Domain.Entities.Reservation()

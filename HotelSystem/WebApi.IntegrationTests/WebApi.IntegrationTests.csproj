@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelSystem.Persistance\HotelSystem.Persistance.csproj" />
+    <ProjectReference Include="..\HotelSystem\HotelSystem.Api.csproj" />
   </ItemGroup>
 
 </Project>

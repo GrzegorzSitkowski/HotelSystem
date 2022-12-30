@@ -154,6 +154,86 @@
         }
       }
     },
+    "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj",
+        "projectName": "HotelSystem.Infrastructure",
+        "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\sitko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sitko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Application\\HotelSystem.Application.csproj": {
+                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Application\\HotelSystem.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Persistance\\HotelSystem.Persistance.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -255,6 +335,122 @@
         }
       }
     },
+    "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
+        "projectName": "HotelSystem.Api",
+        "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj",
+        "packagesPath": "C:\\Users\\sitko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sitko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Infrastructure\\HotelSystem.Infrastructure.csproj"
+              },
+              "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Persistance\\HotelSystem.Persistance.csproj": {
+                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Persistance\\HotelSystem.Persistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\WebApi.IntegrationTests\\WebApi.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -285,6 +481,9 @@
             "projectReferences": {
               "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Persistance\\HotelSystem.Persistance.csproj": {
                 "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem.Persistance\\HotelSystem.Persistance.csproj"
+              },
+              "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj": {
+                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\Programowanie\\HotelSystem\\HotelSystem\\HotelSystem\\HotelSystem.Api.csproj"
               }
             }
           }
