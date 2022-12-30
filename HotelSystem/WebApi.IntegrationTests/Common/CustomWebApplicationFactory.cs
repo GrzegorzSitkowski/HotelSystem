@@ -29,7 +29,7 @@ namespace WebApi.IntegrationTests.Common
 
                     services.AddDbContext<HotelDbContext>(options =>
                     {
-                        options.UseInMemoryDatabase("InMemoryDatabase");
+                        options.UseInMemoryDatabase("InMemoryDbForTesting");
                         options.UseInternalServiceProvider(serviceProvider);
                     });
 
