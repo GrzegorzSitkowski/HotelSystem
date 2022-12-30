@@ -1,10 +1,12 @@
 ﻿using HotelSystem;
+using HotelSystem.Application.Reservations.Queries.GetReservationDetail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.IntegrationTests.Common;
 using Xunit;
+using Shouldly;
 
 namespace WebApi.IntegrationTests.Controllers.Reservations
 {
@@ -26,7 +28,7 @@ namespace WebApi.IntegrationTests.Controllers.Reservations
             var response = await client.GetAsync($"/api/reservations/{id}");
             response.EnsureSuccessStatusCode();
 
-            var vm = await Utilities.GetResponseContext<ReservationDetailVm>(response);
+            var vm = await Utilities.GetResponseContent<ReservationDetailVm>(response);
             vm.ShouldNotBeNull();
         }
     }

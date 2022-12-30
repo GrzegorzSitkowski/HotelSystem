@@ -522,6 +522,10 @@
               "target": "Package",
               "version": "[6.1.0, )"
             },
+            "Shouldly": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
