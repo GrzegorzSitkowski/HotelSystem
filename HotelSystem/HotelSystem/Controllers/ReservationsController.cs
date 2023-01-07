@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace HotelSystem.Api.Controllers
 {
     [Route("api/reservations")]
-    [Authorize]
+    //[Authorize]
     public class ReservationsController : BaseController
     {
         private readonly HotelDbContext _context;

@@ -86,11 +86,11 @@ namespace HotelSystem
                             }
                         }
                         });
-                services.AddAuthentication("Bearer").AddIdentityServerJwt();
+               // services.AddAuthentication("Bearer").AddIdentityServerJwt();
             }
             else
             {
-                 services.AddAuthentication("Bearer")
+                 /*services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
                     options.Authority = "https://localhost:5001";
@@ -106,7 +106,7 @@ namespace HotelSystem
                         policy.RequireAuthenticatedUser();
                         policy.RequireClaim("scope", "api1");
                     });
-                });
+                });*/
             }
 
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -114,7 +114,7 @@ namespace HotelSystem
 
             services.AddSwaggerGen(c =>
             {
-                c.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
+                /*c.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
                 {
                     Type = SecuritySchemeType.OAuth2,
                     Flows = new OpenApiOAuthFlows()
@@ -130,8 +130,8 @@ namespace HotelSystem
                             }
                         }
                     }
-                });
-                c.OperationFilter<AuthorizeCheckOperationFilter>();
+                });*/
+                //c.OperationFilter<AuthorizeCheckOperationFilter>();
                 c.SwaggerDoc("v1", new OpenApiInfo {
                     Title = "HotelSystem",
                     Version = "v1",
@@ -148,14 +148,14 @@ namespace HotelSystem
 
             services.AddHealthChecks();
 
-            services.AddAuthorization(options =>
+            /*services.AddAuthorization(options =>
             {
                 options.AddPolicy("ApiScope", policy =>
                 {
                     policy.RequireAuthenticatedUser();
                     policy.RequireClaim("scope", "api1");
                 });
-            });
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -168,8 +168,8 @@ namespace HotelSystem
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelSystem v1");
-                    c.OAuthClientId("swagger");
-                    c.OAuth2RedirectUrl("https://localhost:44321/swagger/oauth2-redirect.html");
+                    //c.OAuthClientId("swagger");
+                    //c.OAuth2RedirectUrl("https://localhost:44321/swagger/oauth2-redirect.html");
                     c.OAuthUsePkce();
                 });
             }                      
@@ -189,7 +189,7 @@ namespace HotelSystem
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers().RequireAuthorization("ApiScope");
+                endpoints.MapControllers();//.RequireAuthorization("ApiScope");
             });
         }
     }
