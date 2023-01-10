@@ -9,10 +9,6 @@ import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.com
 
 const routes: Routes = [
   {
-    path: '',
-    component: RoomsListComponent
-  },
-  {
     path: 'rooms',
     component: RoomsListComponent
   },
