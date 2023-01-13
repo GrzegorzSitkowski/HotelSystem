@@ -4,22 +4,18 @@
     <table class="table table-dark table-striped" *ngIf="rooms && rooms.length >0">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
-                <th>Capacity</th>
                 <th>Price</th>
-                <th>Avability</th>
+                <th>Description</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let room of rooms">
-                <td>{{ room.id }}</td>
                 <td>{{ room.name }}</td>
-                <td>{{ room.capacity }}</td>
                 <td>{{ room.price }}</td>
-                <td>{{ room.avability }}</td>
-                <td><a [routerLink]="['/rooms', 'edit', room.id]">View</a></td>
+                <td>{{ room.description }}</td>
+                <td><a [routerLink]="['/rooms', 'edit', room.id]">Book</a></td>
             </tr>
         </tbody>
     </table>
