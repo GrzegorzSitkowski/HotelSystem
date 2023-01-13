@@ -4,5 +4,6 @@ export interface Room{
     capacity: number;
     price: number;
     avability: boolean;
+    amenities: string;
     description: string;
 }
