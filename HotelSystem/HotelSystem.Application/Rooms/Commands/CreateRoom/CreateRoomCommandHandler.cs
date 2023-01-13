@@ -26,6 +26,7 @@ namespace HotelSystem.Application.Rooms.Commands.CreateRoom
                 Capacity = request.Capacity,
                 Price = request.Price,
                 Avability = request.Avability,
+                Amenities = request.Amenities,
                 Description = request.Description
             };
 
