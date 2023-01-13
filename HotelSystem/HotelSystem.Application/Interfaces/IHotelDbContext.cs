@@ -11,7 +11,6 @@ namespace HotelSystem.Application.Interfaces
 {
     public interface IHotelDbContext
     {
-        DbSet<Domain.Entities.Amenities> Amenities { get; set; }
         DbSet<Reservation> Reservations { get; set; }
         DbSet<Room> Rooms { get; set; }
         DbSet<User> Users { get; set; }
