@@ -6,6 +6,7 @@
             <tr>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Amenities</th>
                 <th>Description</th>
                 <th></th>
             </tr>
@@ -14,6 +15,7 @@
             <tr *ngFor="let room of rooms">
                 <td>{{ room.name }}</td>
                 <td>{{ room.price }}</td>
+                <td>{{ room.amenities }}</td>
                 <td>{{ room.description }}</td>
                 <td><a [routerLink]="['/rooms', 'edit', room.id]">Book</a></td>
             </tr>
