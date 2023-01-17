@@ -27,6 +27,7 @@ namespace HotelSystem.Application.Rooms.Commands.UpdateRoom
             room.Price = request.Price;
             room.Avability = request.Avability;
             room.Amenities = request.Amenities;
+            room.PhotoUrl = request.PhotoUrl;
             room.Description = request.Description;
 
             await _context.SaveChangesAsync(cancellationToken);
