@@ -17,6 +17,7 @@ export class AddRoomComponent implements OnInit {
     price: 0,
     avability: false,
     amenities: '',
+    photoUrl: '',
     description: ''
   }
   constructor(private roomService: RoomsService, private router: Router) { }

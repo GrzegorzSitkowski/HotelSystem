@@ -17,6 +17,7 @@ export class EditRoomComponent implements OnInit {
     price: 0,
     avability: false,
     amenities: '',
+    photoUrl: '',
     description: ''
   };
 
