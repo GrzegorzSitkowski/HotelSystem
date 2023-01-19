@@ -45,6 +45,7 @@ export class EditRoomComponent implements OnInit {
     .subscribe({
       next: (response) => {
         this.router.navigate(['rooms']);
+        alert('Update successfully!');
       }
     });
   }
