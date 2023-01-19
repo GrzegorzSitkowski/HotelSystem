@@ -14,7 +14,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let room of rooms">
-                <td>{{ room.photoUrl }}</td>
+                <img [src]="room.photoUrl">
                 <td>{{ room.name }}</td>
                 <td>{{ room.price }}</td>
                 <td>{{ room.amenities }}</td>
