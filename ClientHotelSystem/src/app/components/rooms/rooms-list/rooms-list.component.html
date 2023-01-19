@@ -4,7 +4,7 @@
     <table class="table table-dark table-striped" *ngIf="rooms && rooms.length >0">
         <thead>
             <tr>
-                <th>Photo</th>
+                <th></th>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Amenities</th>
@@ -14,7 +14,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let room of rooms">
-                <img [src]="room.photoUrl">
+                <td>
+                <img [src]="room.photoUrl" width="150" height="100">
+                </td>
                 <td>{{ room.name }}</td>
                 <td>{{ room.price }}</td>
                 <td>{{ room.amenities }}</td>
