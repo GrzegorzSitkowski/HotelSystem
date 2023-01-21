@@ -1,29 +1,28 @@
-<div class="container my-5">
-    <h1 class="mb-3">Rooms</h1>
-
-    <table class="table table-dark table-striped" *ngIf="rooms && rooms.length >0">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Amenities</th>
-                <th>Description</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let room of rooms">
-                <td>
-                <img [src]="room.photoUrl" width="150" height="100">
-                </td>
-                <td>{{ room.name }}</td>
-                <td>{{ room.price }}</td>
-                <td>{{ room.amenities }}</td>
-                <td>{{ room.description }}</td>
-                <td><a [routerLink]="['/rooms', 'edit', room.id]">Book</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <p *ngIf="!rooms || rooms.length <= 0">No rooms found.</p>
+<div class="container" *ngIf="rooms && rooms.length >0">
+    <h2>Our rooms</h2>
+    <div clas="room" *ngFor="let room of rooms">
+        <div class="row">
+            <div class="col-6 col-sm-6">
+                    <img [src]="room.photoUrl" width="600" height="400">
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="title">
+                    <h3> {{ room.name }}</h3>
+                </div>
+                <div class="details">
+                    <div class="capacity">
+                        <p>For {{ room.capacity }} people</p>
+                    </div>
+                    <p>{{ room.description }}</p> 
+                    <div class="amenities">               
+                        <p>{{ room.amenities }}</p> 
+                    </div>  
+                </div>
+                <div class="button">
+                    <button type="button" class="btn btn-success" [routerLink]="['/rooms', 'edit', room.id]">Book</button>
+                </div>             
+            </div>         
+        </div>   
+        <div class="break"></div>   
+    </div>
 </div>
