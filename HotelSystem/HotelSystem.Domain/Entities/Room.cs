@@ -15,6 +15,7 @@ namespace HotelSystem.Domain.Entities
         public bool Avability { get; set; }
         public string Description { get; set; }
         public string Amenities { get; set; }
+        public string PhotoUrl { get; set; }
         public User User { get; set; }
         public Reservation Reservation { get; set; }
     }

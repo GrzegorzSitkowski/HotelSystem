@@ -17,6 +17,7 @@ export class EditRoomComponent implements OnInit {
     price: 0,
     avability: false,
     amenities: '',
+    photoUrl: '',
     description: ''
   };
 
@@ -44,6 +45,7 @@ export class EditRoomComponent implements OnInit {
     .subscribe({
       next: (response) => {
         this.router.navigate(['rooms']);
+        alert('Update successfully!');
       }
     });
   }
@@ -53,6 +55,7 @@ export class EditRoomComponent implements OnInit {
     .subscribe({
       next:(response) => {
         this.router.navigate(['rooms']);
+        alert('Delete successfully.');
       }     
     });
   }

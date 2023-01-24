@@ -5,5 +5,6 @@ export interface Room{
     price: number;
     avability: boolean;
     amenities: string;
+    photoUrl: string;
     description: string;
 }

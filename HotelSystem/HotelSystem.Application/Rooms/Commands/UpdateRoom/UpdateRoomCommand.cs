@@ -15,6 +15,7 @@ namespace HotelSystem.Application.Rooms.Commands.UpdateRoom
         public int Price { get; set; }
         public bool Avability { get; set; }
         public string Amenities { get; set; }
+        public string PhotoUrl { get; set; }
         public string Description { get; set; }
     }
 }

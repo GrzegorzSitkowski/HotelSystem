@@ -17,6 +17,7 @@ namespace HotelSystem.Application.Rooms.Queries.GetRoomDetail
         public int Price { get; set; }
         public bool Avability { get; set; }
         public string Amenities { get; set; }
+        public string PhotoUrl { get; set; }
         public string Description { get; set; }
 
         public void Mapping(Profile profile)
