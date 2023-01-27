@@ -23,10 +23,15 @@ namespace HotelSystem.Application.Users.Commands.CreateUser
         {
             User user = new()
             {
+                FirstName = request.FirstName,
+                LastName = request.LastName,
                 Type = request.Type,
                 Mail = request.Mail,
                 Password = request.Password,
-                //UserName = new Domain.ValueObjects.PersonName() { FirstName = request.FirstName, LastName = request.LastName }
+                PhoneNumner = request.PhoneNumner,
+                Address = request.Address,
+                PostCode = request.PostCode,
+                City = request.City
             };
 
             _context.Users.Add(user);
