@@ -22,9 +22,15 @@ namespace HotelSystem.Application.Users.Commands.UpdateUser
             var user = await _context.Users.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
 
             user.Id = request.Id;
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
             user.Type = request.Type;
             user.Mail = request.Mail;
             user.Password = request.Password;
+            user.PhoneNumner = request.PhoneNumner;
+            user.Address = request.Address;
+            user.PostCode = request.PostCode;
+            user.City = request.City;
 
             await _context.SaveChangesAsync(cancellationToken);
 
