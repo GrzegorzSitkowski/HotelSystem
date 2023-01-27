@@ -26,7 +26,7 @@ namespace HotelSystem.Application.Users.Commands.CreateUser
                 Type = request.Type,
                 Mail = request.Mail,
                 Password = request.Password,
-                UserName = new Domain.ValueObjects.PersonName() { FirstName = request.FirstName, LastName = request.LastName }
+                //UserName = new Domain.ValueObjects.PersonName() { FirstName = request.FirstName, LastName = request.LastName }
             };
 
             _context.Users.Add(user);

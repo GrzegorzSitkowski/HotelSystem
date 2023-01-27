@@ -43,7 +43,7 @@ namespace HotelSystem.Persistance
                     Mail = "example@mail.com",
                     Password = "password"
                 });
-                u.OwnsOne(u => u.UserName).HasData(new { UserId = 1, FirstName = "Grzegorz", LastName = "Sitkowski" });
+                //u.OwnsOne(u => u.UserName).HasData(new { UserId = 1, FirstName = "Grzegorz", LastName = "Sitkowski" });
             });
                    
         }
