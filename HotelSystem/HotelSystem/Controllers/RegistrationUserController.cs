@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Users.Commands.CreateUser;
+using HotelSystem.Application.Users.Commands.DeleteUser;
 using HotelSystem.Application.Users.Commands.UpdateUser;
 using HotelSystem.Application.Users.Queries.GetUserDetail;
 using HotelSystem.Application.Users.Queries.GetUsers;
@@ -44,10 +45,17 @@ namespace HotelSystem.Api.Controllers
             return Ok(users);
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(UpdateUserCommand command)
         {
             var user = await Mediator.Send(command);
+            return Ok(user);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUser(int id)
+        {
+            var user = await Mediator.Send(new DeleteUserCommand() { Id = id });
             return Ok(user);
         }
     }
