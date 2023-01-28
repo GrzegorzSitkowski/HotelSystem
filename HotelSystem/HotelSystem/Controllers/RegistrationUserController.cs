@@ -1,6 +1,9 @@
 ﻿using HotelSystem.Application.Users.Commands.CreateUser;
 using HotelSystem.Application.Users.Queries.GetUserDetail;
+using HotelSystem.Application.Users.Queries.GetUsers;
+using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +14,13 @@ namespace HotelSystem.Api.Controllers
     public class RegistrationUserController : BaseController
     {
         [Route("api/registration")]
+
+        private readonly HotelDbContext _context;
+
+        public RegistrationUserController(HotelDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpPost]
         public async Task<IActionResult> RegisterUser(CreateUserCommand command)
@@ -24,6 +34,13 @@ namespace HotelSystem.Api.Controllers
         {
             var vm = await Mediator.Send(new GetUserDetailQuery() { Id = id });
             return vm;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<UsersVm>> GetUsers()
+        {
+            var users = await _context.Users.AsNoTracking().Where(p => p.StatusId == 1).ToListAsync();
+            return Ok(users);
         }
     }
 }
