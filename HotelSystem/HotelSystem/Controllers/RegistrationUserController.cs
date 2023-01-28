@@ -1,4 +1,5 @@
 ﻿using HotelSystem.Application.Users.Commands.CreateUser;
+using HotelSystem.Application.Users.Commands.UpdateUser;
 using HotelSystem.Application.Users.Queries.GetUserDetail;
 using HotelSystem.Application.Users.Queries.GetUsers;
 using HotelSystem.Persistance;
@@ -41,6 +42,13 @@ namespace HotelSystem.Api.Controllers
         {
             var users = await _context.Users.AsNoTracking().Where(p => p.StatusId == 1).ToListAsync();
             return Ok(users);
+        }
+
+        [HttpPut("id")]
+        public async Task<IActionResult> UpdateUser(UpdateUserCommand command)
+        {
+            var user = await Mediator.Send(command);
+            return Ok(user);
         }
     }
 }
