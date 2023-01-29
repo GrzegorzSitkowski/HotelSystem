@@ -5,7 +5,7 @@ export interface User{
     type: string;
     mail: string;
     password: string;
-    phoneNumber: string;
+    phoneNumner: string;
     address: string;
     postCode: string;
     city: string;

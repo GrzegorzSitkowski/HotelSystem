@@ -17,7 +17,7 @@ export class AddUserComponent implements OnInit {
     type: '',
     mail: '',
     password: '',
-    phoneNumber: '',
+    phoneNumner: '',
     address: '',
     postCode: '',
     city: ''
@@ -33,10 +33,9 @@ export class AddUserComponent implements OnInit {
     this.userService.addUser(this.addUserRequest)
     .subscribe({
       next: (user) => {
-        this.router.navigate([user]);
-        console.log(user);
+        this.router.navigate(['']);
       }
-    });
+    })
   }
 
 }

@@ -14,12 +14,12 @@ using System.Threading.Tasks;
 namespace HotelSystem.Api.Controllers
 {
     [Route("api/users")]
-    public class UserController : BaseController
+    public class UsersController : BaseController
     {    
 
         private readonly HotelDbContext _context;
 
-        public UserController(HotelDbContext context)
+        public UsersController(HotelDbContext context)
         {
             _context = context;
         }
