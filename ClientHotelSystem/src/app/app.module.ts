@@ -12,7 +12,6 @@ import { ListReservationsComponent } from './components/reservations/list-reserv
 import { AddReservationComponent } from './components/reservations/add-reservation/add-reservation.component';
 import { EditReservationComponent } from './components/reservations/edit-reservation/edit-reservation.component';
 import { HomeComponent } from './components/home/home.component';
-import { UserComponent } from './components/user/user.component';
 import { AddUserComponent } from './components/users/add-user/add-user.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { AddUserComponent } from './components/users/add-user/add-user.component
     AddReservationComponent,
     EditReservationComponent,
     HomeComponent,
-    UserComponent,
     AddUserComponent
   ],
   imports: [

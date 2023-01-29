@@ -10,7 +10,7 @@ import { UsersService } from 'src/app/services/users/users.service';
 })
 export class AddUserComponent implements OnInit {
 
-  adduserRequest: User = {
+  addUserRequest: User = {
     id: '0',
     firstName: '',
     lastName: '',
@@ -29,8 +29,8 @@ export class AddUserComponent implements OnInit {
   }
 
   addUser(){
-    console.log(this.adduserRequest);
-    this.userService.addUser(this.adduserRequest)
+    console.log(this.addUserRequest);
+    this.userService.addUser(this.addUserRequest)
     .subscribe({
       next: (user) => {
         this.router.navigate([user]);
