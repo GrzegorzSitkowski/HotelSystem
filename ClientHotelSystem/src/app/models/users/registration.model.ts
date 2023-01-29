@@ -6,7 +6,7 @@ export interface User{
     mail: string;
     password: string;
     phoneNumber: string;
-    addres: string;
+    address: string;
     postCode: string;
     city: string;
 }
