@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Api.Controllers
 {
-    [Route("api/registration")]
+    [Route("api/users")]
     public class RegistrationUserController : BaseController
     {    
 
