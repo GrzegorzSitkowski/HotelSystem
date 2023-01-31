@@ -4,6 +4,10 @@
     <div class="row">
         <div class="col-6">
             <form #form="ngForm" (ngSubmit)="updateUser()">
+              <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" name="id" [(ngModel)]="userDetails.id">
+              </div>
                 <div class="mb-3">
                   <label for="firstName" class="form-label">First Name</label>
                   <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="userDetails.firstName">
