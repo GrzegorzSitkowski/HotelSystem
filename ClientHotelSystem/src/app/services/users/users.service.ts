@@ -18,4 +18,8 @@ export class UsersService {
   addUser(addUserRequest: User): Observable<User>{
     return this.http.post<User>(this.baseApiUrl + '/api/users', addUserRequest);
   }
+
+  getUser(id: string): Observable<User>{
+    return this.http.get<User>(this.baseApiUrl + '/api/users/' + id);
+  }
 }
