@@ -38,12 +38,17 @@ namespace HotelSystem.Persistance
             {
                 u.HasData(new User()
                 {
-                    Id = 1,
-                    Type = "Customer",
+                    Id = 10,
+                    FirstName = "Grzegorz",
+                    LastName = "Sitkowski",
+                    Type = "Admin",
                     Mail = "example@mail.com",
-                    Password = "password"
+                    Password = "Password123",
+                    PhoneNumner = "123 456 789",
+                    Address = "Street 15/26",
+                    PostCode = "10-100",
+                    City = "City"
                 });
-                u.OwnsOne(u => u.UserName).HasData(new { UserId = 1, FirstName = "Grzegorz", LastName = "Sitkowski" });
             });
                    
         }

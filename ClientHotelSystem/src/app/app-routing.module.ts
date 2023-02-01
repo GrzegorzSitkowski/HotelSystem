@@ -7,11 +7,26 @@ import { ListReservationsComponent } from './components/reservations/list-reserv
 import { AddRoomComponent } from './components/rooms/add-room/add-room.component';
 import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
 import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.component';
+import { AddUserComponent } from './components/users/add-user/add-user.component';
+import { EditUserComponent } from './components/users/edit-user/edit-user.component';
+import { UsersListComponent } from './components/users/users-list/users-list.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'users',
+    component: UsersListComponent
+  },
+  {
+    path: 'users/add',
+    component: AddUserComponent
+  },
+  {
+    path: 'users/edit/:id',
+    component: EditUserComponent
   },
   {
     path: 'rooms',
