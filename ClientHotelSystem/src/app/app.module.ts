@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AddUserComponent } from './components/users/add-user/add-user.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { EditUserComponent } from './components/users/edit-user/edit-user.component';
+import { LoginUserComponent } from './components/users/login-user/login-user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EditUserComponent } from './components/users/edit-user/edit-user.compon
     HomeComponent,
     AddUserComponent,
     UsersListComponent,
-    EditUserComponent
+    EditUserComponent,
+    LoginUserComponent
   ],
   imports: [
     BrowserModule,
