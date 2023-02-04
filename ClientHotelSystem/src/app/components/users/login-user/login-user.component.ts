@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { User } from 'src/app/models/users/login.model';
+import { UsersService } from 'src/app/services/users/users.service';
 
 @Component({
   selector: 'app-login-user',
@@ -9,7 +9,7 @@ import { User } from 'src/app/models/users/login.model';
 })
 export class LoginUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {}
 
@@ -18,8 +18,19 @@ export class LoginUserComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
   });
 
+  isUserValid: boolean = false;
+
   loginSubmited(){
-    console.log(this.loginForm);
+    this.userService.loginUser([this.loginForm.value.email!, this.loginForm.value.password!])
+    .subscribe(res => {
+      if(res == "Failure"){
+        this.isUserValid = false;
+        alert('Login unsuccesfull');
+      }else{
+        this.isUserValid = true;
+        alert('Login succesfull');
+      }
+    });
   }
 
   get Email(): FormControl{

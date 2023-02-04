@@ -61,9 +61,9 @@ namespace HotelSystem.Api.Controllers
         }
 
         [HttpPost("LoginUser")]
-        public IActionResult Login(User user)
+        public IActionResult Login(LoginUser user)
         {
-            var userAvailable = _context.Users.Where(u => u.Mail == user.Mail && u.Password == user.Password).FirstOrDefault();
+            var userAvailable = _context.Users.Where(u => u.Mail == user.Email && u.Password == user.Password).FirstOrDefault();
             if(userAvailable != null)
             {
                 return Ok("Success");

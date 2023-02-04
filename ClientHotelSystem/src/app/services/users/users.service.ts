@@ -32,9 +32,14 @@ export class UsersService {
   }
 
   loginUser(loginInfo: Array<string>){
-    return this.http.post(this.baseApiUrl + '/api/users/LoginUser',{
+    return this.http.post(this.baseApiUrl + '/api/users/LoginUser',
+    {
       Email: loginInfo[0],
-      Password: loginInfo[1]
-    });
+      Password: loginInfo[1],
+    },
+    {
+      responseType: 'text',
+    }
+    );
   }
 }
