@@ -18,6 +18,10 @@ export class LoginUserComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
   });
 
+  loginSubmited(){
+    console.log(this.loginForm);
+  }
+
   get Email(): FormControl{
     return this.loginForm.get('email') as FormControl;
   }
