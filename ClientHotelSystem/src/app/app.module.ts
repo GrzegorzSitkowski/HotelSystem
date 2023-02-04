@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.component';
 import { AddRoomComponent } from './components/rooms/add-room/add-room.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
 import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
 import { AddReservationComponent } from './components/reservations/add-reservation/add-reservation.component';
@@ -36,7 +36,8 @@ import { LoginUserComponent } from './components/users/login-user/login-user.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
