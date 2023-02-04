@@ -30,4 +30,11 @@ export class UsersService {
   deleteUser(id: string): Observable<User>{
     return this.http.delete<User>(this.baseApiUrl + '/api/users/' + id);
   }
+
+  loginUser(loginInfo: Array<string>){
+    return this.http.post(this.baseApiUrl + '/api/users/LoginUser',{
+      Email: loginInfo[0],
+      Password: loginInfo[1]
+    });
+  }
 }
