@@ -3,6 +3,7 @@ using HotelSystem.Application.Users.Commands.DeleteUser;
 using HotelSystem.Application.Users.Commands.UpdateUser;
 using HotelSystem.Application.Users.Queries.GetUserDetail;
 using HotelSystem.Application.Users.Queries.GetUsers;
+using HotelSystem.Domain.Entities;
 using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -57,6 +58,18 @@ namespace HotelSystem.Api.Controllers
         {
             var user = await Mediator.Send(new DeleteUserCommand() { Id = id });
             return Ok(user);
+        }
+
+        [HttpPost("LoginUser")]
+        public IActionResult Login(LoginUser user)
+        {
+            var userAvailable = _context.Users.Where(u => u.Mail == user.Email && u.Password == user.Password).FirstOrDefault();
+            if(userAvailable != null)
+            {
+                return Ok("Success");
+            }
+
+            return Ok("Failure");
         }
     }
 }
