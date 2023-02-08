@@ -1,6 +1,6 @@
 form{
     width: 500px;
-    background-color: aliceblue;
+    background-image: linear-gradient(to bottom right,#b2d6d7,#3cb076);
     margin: auto;
     margin-top: 150px;
 }
