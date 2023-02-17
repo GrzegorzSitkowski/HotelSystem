@@ -1,4 +1,4 @@
-﻿]using AutoMapper;
+﻿using AutoMapper;
 using HotelSystem.Application.Mappings;
 using HotelSystem.Domain.Entities;
 using System;
