@@ -31,6 +31,18 @@ export class UsersService {
     return this.http.delete<User>(this.baseApiUrl + '/api/users/' + id);
   }
 
+  getUserMail(mail: string): Observable<User>{
+    return this.http.get<User>(this.baseApiUrl + '/api/users/' + mail);
+  }
+
+  updateUserMail(mail: string, updateUserRequestMail: User): Observable<User>{
+    return this.http.put<User>(this.baseApiUrl + '/api/users/' + mail, updateUserRequestMail);
+  }
+
+  deleteUserMail(mail: string): Observable<User>{
+    return this.http.delete<User>(this.baseApiUrl + '/api/users/' + mail);
+  }
+
   loginUser(loginInfo: Array<string>){
     return this.http.post(this.baseApiUrl + '/api/users/LoginUser',
     {

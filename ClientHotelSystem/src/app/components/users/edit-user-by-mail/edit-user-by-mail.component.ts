@@ -31,7 +31,7 @@ export class EditUserByMailComponent implements OnInit {
         const mail = params.get('mail');
 
         if(mail){
-          this.userService.getUser(mail)
+          this.userService.getUserMail(mail)
           .subscribe({
             next: (response) => {
               this.userDetails = response;
@@ -42,8 +42,8 @@ export class EditUserByMailComponent implements OnInit {
     })
   }
 
-  updateUser(){
-    this.userService.updateUser(this.userDetails.mail,
+  updateUserMail(){
+    this.userService.updateUserMail(this.userDetails.mail,
       this.userDetails)
       .subscribe({
         next: (response) => {
@@ -52,8 +52,8 @@ export class EditUserByMailComponent implements OnInit {
       })
   }
 
-  deleteUser(mail: string){
-    this.userService.deleteUser(mail)
+  deleteUserMail(mail: string){
+    this.userService.deleteUserMail(mail)
     .subscribe({
       next: (response) => {
         this.router.navigate(['users']);
