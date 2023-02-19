@@ -16,7 +16,7 @@ import { AddUserComponent } from './components/users/add-user/add-user.component
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
-import { EditUserByMailComponent } from './components/edit-user-by-mail/edit-user-by-mail.component';
+import { EditUserByMailComponent } from './components/users/edit-user-by-mail/edit-user-by-mail.component';
 
 @NgModule({
   declarations: [

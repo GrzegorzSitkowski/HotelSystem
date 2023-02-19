@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users/users.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { UsersService } from 'src/app/services/users/users.service';
 })
 export class LoginUserComponent implements OnInit {
 
-  constructor(private userService: UsersService, private router: Router ) { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {}
 
@@ -30,7 +29,6 @@ export class LoginUserComponent implements OnInit {
       }else{
         this.isUserValid = true;
         alert('Login succesfull');
-        this.router.navigate(['']);
       }
     });
   }
@@ -43,5 +41,3 @@ export class LoginUserComponent implements OnInit {
     return this.loginForm.get('password') as FormControl;
   }
 }
-
-
