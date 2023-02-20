@@ -30,7 +30,7 @@ export class LoginUserComponent implements OnInit {
       }else{
         this.isUserValid = true;
         alert('Login succesfull');
-        this.router.navigate(['users/edit/' + this.loginForm.value.email]);
+        this.router.navigate(['users/get/' + this.loginForm.value.email]);
       }
     });
   }
