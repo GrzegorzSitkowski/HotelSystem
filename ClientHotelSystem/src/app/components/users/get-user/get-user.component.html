@@ -1,1 +1,51 @@
-<p>get-user works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Your profile</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="ngOnInit()">
+              <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" name="id" [(ngModel)]="userDetails.id">
+              </div>
+                <div class="mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="userDetails.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="userDetails.lastName">
+                  </div>
+                  <div class="mb-3">
+                    <label for="type" class="form-label">Type account</label>
+                    <input type="text" class="form-control" id="type" name="type" [(ngModel)]="userDetails.type">
+                  </div>
+                  <div class="mb-3">
+                    <label for="mail" class="form-label">E-mail</label>
+                    <input type="text" class="form-control" id="mail" name="mail" [(ngModel)]="userDetails.mail">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userDetails.password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="phoneNumner" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumner" name="phoneNumner" [(ngModel)]="userDetails.phoneNumner">
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" [(ngModel)]="userDetails.address">
+                  </div>
+                  <div class="mb-3">
+                    <label for="postCode" class="form-label">Post code</label>
+                    <input type="text" class="form-control" id="postCode" name="postCode" [(ngModel)]="userDetails.postCode">
+                  </div>
+                  <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" [(ngModel)]="userDetails.city">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+        </div>        
+    </div>  
+</div>
