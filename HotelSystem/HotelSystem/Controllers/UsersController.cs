@@ -71,11 +71,11 @@ namespace HotelSystem.Api.Controllers
         [HttpPost("LoginUser")]
         public IActionResult Login(LoginUser user)
         {
-            user.Authorization = false;
+            //user.Authorization = false;
             var userAvailable = _context.Users.Where(u => u.Mail == user.Email && u.Password == user.Password).FirstOrDefault();
             if(userAvailable != null)
             {
-                user.Authorization = true;
+                //user.Authorization = true;
                 return Ok("Success");
             }
 
