@@ -8,7 +8,9 @@ import { AddRoomComponent } from './components/rooms/add-room/add-room.component
 import { EditRoomComponent } from './components/rooms/edit-room/edit-room.component';
 import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.component';
 import { AddUserComponent } from './components/users/add-user/add-user.component';
+import { EditUserByMailComponent } from './components/users/edit-user-by-mail/edit-user-by-mail.component';
 import { EditUserComponent } from './components/users/edit-user/edit-user.component';
+import { GetUserComponent } from './components/users/get-user/get-user.component';
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: 'users/edit/:id',
     component: EditUserComponent
+  },
+  {
+    path: 'users/edit/:mail',
+    component: EditUserByMailComponent
+  },
+  {
+    path: 'users/get/:mail',
+    component: GetUserComponent
   },
   {
     path: 'rooms',

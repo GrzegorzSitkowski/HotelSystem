@@ -10,7 +10,7 @@ import { UsersService } from 'src/app/services/users/users.service';
 })
 export class LoginUserComponent implements OnInit {
 
-  constructor(private userService: UsersService, private router: Router ) { }
+  constructor(private userService: UsersService,private router: Router) { }
 
   ngOnInit(): void {}
 
@@ -30,7 +30,7 @@ export class LoginUserComponent implements OnInit {
       }else{
         this.isUserValid = true;
         alert('Login succesfull');
-        this.router.navigate(['']);
+        this.router.navigate(['users/get/' + this.loginForm.value.email]);
       }
     });
   }
@@ -43,5 +43,3 @@ export class LoginUserComponent implements OnInit {
     return this.loginForm.get('password') as FormControl;
   }
 }
-
-

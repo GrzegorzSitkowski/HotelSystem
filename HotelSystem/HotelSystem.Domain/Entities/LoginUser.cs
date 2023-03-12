@@ -10,5 +10,6 @@ namespace HotelSystem.Domain.Entities
     {
         public string Email { get; set; }
         public string Password { get; set; }
+        public bool Authorization { get; set; }
     }
 }

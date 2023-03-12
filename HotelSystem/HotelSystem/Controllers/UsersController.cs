@@ -2,6 +2,7 @@
 using HotelSystem.Application.Users.Commands.DeleteUser;
 using HotelSystem.Application.Users.Commands.UpdateUser;
 using HotelSystem.Application.Users.Queries.GetUserDetail;
+using HotelSystem.Application.Users.Queries.GetUserDetailByMail;
 using HotelSystem.Application.Users.Queries.GetUsers;
 using HotelSystem.Domain.Entities;
 using HotelSystem.Persistance;
@@ -32,10 +33,17 @@ namespace HotelSystem.Api.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<UserDetailVm>> GetUserDetail(int id)
         {
             var vm = await Mediator.Send(new GetUserDetailQuery() { Id = id });
+            return vm;
+        }
+
+        [HttpGet("{mail}")]
+        public async Task<ActionResult<UserDetailByMailVm>> GetUserDetailByMail(string mail)
+        {
+            var vm = await Mediator.Send(new GetUserDetailQueryByMail() { Mail = mail });
             return vm;
         }
 
@@ -63,9 +71,11 @@ namespace HotelSystem.Api.Controllers
         [HttpPost("LoginUser")]
         public IActionResult Login(LoginUser user)
         {
+            //user.Authorization = false;
             var userAvailable = _context.Users.Where(u => u.Mail == user.Email && u.Password == user.Password).FirstOrDefault();
             if(userAvailable != null)
             {
+                //user.Authorization = true;
                 return Ok("Success");
             }
 
