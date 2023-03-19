@@ -12,7 +12,10 @@ export class LoginUserComponent implements OnInit {
 
   constructor(private userService: UsersService,private router: Router) { }
 
-  ngOnInit(): void {console.log(this.userService.isLogin);}
+  ngOnInit(): void {
+    localStorage.getItem('this.userService.isLogin');
+    console.log(this.userService.isLogin);
+  }
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -29,6 +32,7 @@ export class LoginUserComponent implements OnInit {
         alert('Login unsuccesfull');
       }else{
         this.userService.isLogin = true;
+        localStorage.setItem('this.userService.isLogin', 'true');
         this.isUserValid = true;
         alert('Login succesfull');
         this.router.navigate(['users/get/' + this.loginForm.value.email]);

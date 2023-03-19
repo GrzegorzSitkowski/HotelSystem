@@ -24,7 +24,12 @@
           <a class="nav-link active" aria-current="page" routerLink="users/add">New User</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="users/login">Account</a>
+          <div *ngIf="isLogin==false">
+            <a class="nav-link active" aria-current="page" routerLink="users/login">Accounttt</a>
+          </div>
+          <div *ngIf="isLogin==true">
+            <a class="nav-link active" aria-current="page" routerLink="users/get">Your account</a>
+          </div>
         </li>
       </ul>
     </div>
