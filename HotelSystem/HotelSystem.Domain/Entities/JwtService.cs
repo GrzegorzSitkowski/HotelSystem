@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelSystem.Domain.Entities
 {
-    class JwtService
+    public class JwtService
     {
     }
 }
