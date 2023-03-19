@@ -9,6 +9,7 @@ using HotelSystem.Persistance;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,12 @@ namespace HotelSystem.Api.Controllers
     {    
 
         private readonly HotelDbContext _context;
+        private readonly IConfiguration _config;
 
-        public UsersController(HotelDbContext context)
+        public UsersController(HotelDbContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
         [AllowAnonymous]
@@ -82,7 +85,14 @@ namespace HotelSystem.Api.Controllers
             var userAvailable = _context.Users.Where(u => u.Mail == user.Email && u.Password == user.Password).FirstOrDefault();
             if(userAvailable != null)
             {
-                return Ok("Success");
+                return Ok(new JwtService(_config).GenerateToken(
+                    userAvailable.Id.ToString(),
+                    userAvailable.FirstName,
+                    userAvailable.LastName,
+                    userAvailable.Mail,
+                    userAvailable.PhoneNumner
+                        )
+                    );
             }
             return Ok("Failure");
         }
