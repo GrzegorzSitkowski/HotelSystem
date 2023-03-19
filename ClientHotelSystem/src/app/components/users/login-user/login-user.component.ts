@@ -34,7 +34,7 @@ export class LoginUserComponent implements OnInit {
         this.userService.isLogin = true;
         localStorage.setItem('this.userService.isLogin', 'true');
         this.isUserValid = true;
-        alert('Login succesfull');
+        this.userService.setToken(res);
         this.router.navigate(['users/get/' + this.loginForm.value.email]);
         console.log(this.userService.isLogin);
       }
