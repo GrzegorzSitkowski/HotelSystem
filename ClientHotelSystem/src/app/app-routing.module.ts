@@ -13,11 +13,12 @@ import { EditUserComponent } from './components/users/edit-user/edit-user.compon
 import { GetUserComponent } from './components/users/get-user/get-user.component';
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
-
+import { AuthGuard } from './services/users/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'users',

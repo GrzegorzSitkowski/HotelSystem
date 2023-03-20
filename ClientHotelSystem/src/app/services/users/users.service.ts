@@ -77,4 +77,8 @@ export class UsersService {
     } : null;
     this.currentUser.next(data);
   }
+
+  isLoggedin(): boolean{
+    return localStorage.getItem("access_token") ? true : false;
+  }
 }
