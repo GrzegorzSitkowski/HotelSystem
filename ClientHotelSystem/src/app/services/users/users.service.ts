@@ -81,4 +81,8 @@ export class UsersService {
   isLoggedin(): boolean{
     return localStorage.getItem("access_token") ? true : false;
   }
+
+  removeToken(){
+    localStorage.removeItem("access_token");
+  }
 }

@@ -42,4 +42,9 @@ export class GetUserComponent implements OnInit {
     })
   }
 
+  logOut(){
+      this.userService.removeToken();
+      this.router.navigate(['users/login']);
+  }
+
 }
