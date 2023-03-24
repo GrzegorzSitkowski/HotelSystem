@@ -8,9 +8,15 @@ import { UsersService } from './services/users/users.service';
 })
 export class AppComponent implements OnInit{
   isLogin: boolean = false;
-  constructor(private userService: UsersService){}ngOnInit(): void {
+  constructor(private userService: UsersService){}
+  
+  
+    ngOnInit(): void {
     this.isLogin = this.userService.isLogin;
-  }
-;
-  title = 'ClientHotelSystem';
+      if(localStorage.getItem("access_token") == null){
+        this.isLogin = false;
+      }else{
+        this.isLogin = true;
+      }
+  } 
 }
