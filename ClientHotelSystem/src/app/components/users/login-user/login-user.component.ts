@@ -13,8 +13,6 @@ export class LoginUserComponent implements OnInit {
   constructor(private userService: UsersService,private router: Router) { }
 
   ngOnInit(): void {
-    localStorage.getItem('this.userService.isLogin');
-    console.log(this.userService.isLogin);
   }
 
   loginForm = new FormGroup({
@@ -31,11 +29,10 @@ export class LoginUserComponent implements OnInit {
         this.isUserValid = false;
         alert('Login unsuccesfull');
       }else{
-        this.userService.isLogin = true;
-        localStorage.setItem('this.userService.isLogin', 'true');
         this.isUserValid = true;
         this.userService.setToken(res);
         this.router.navigate(['users/get/' + this.loginForm.value.email]);
+        localStorage.setItem('mail', this.loginForm.value.email!);
         console.log(this.userService.isLogin);
       }
     });

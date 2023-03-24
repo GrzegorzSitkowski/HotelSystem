@@ -8,6 +8,7 @@ import { UsersService } from './services/users/users.service';
 })
 export class AppComponent implements OnInit{
   isLogin: boolean = false;
+  urlAfterLogin = 'users/get/'
   constructor(private userService: UsersService){}
   
   
@@ -18,5 +19,6 @@ export class AppComponent implements OnInit{
       }else{
         this.isLogin = true;
       }
+      this.urlAfterLogin += localStorage.getItem("mail");
   } 
 }

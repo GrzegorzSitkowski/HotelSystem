@@ -28,7 +28,7 @@
             <a class="nav-link active" aria-current="page" routerLink="users/login">Login</a>
           </div>
           <div *ngIf="isLogin==true">
-            <a class="nav-link active" aria-current="page" routerLink="users/get">Your account</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="[urlAfterLogin]">Your account</a>
           </div>
         </li>
       </ul>

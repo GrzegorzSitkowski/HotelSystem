@@ -84,5 +84,6 @@ export class UsersService {
 
   removeToken(){
     localStorage.removeItem("access_token");
+    localStorage.removeItem("mail");
   }
 }
