@@ -21,14 +21,14 @@
           <a class="nav-link active" aria-current="page" routerLink="users">Users</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="users/add">New User</a>
+          <a class="nav-link active" aria-current="page" routerLink="users/add">Register</a>
         </li>
         <li class="nav-item">
           <div *ngIf="isLogin==false">
-            <a class="nav-link active" aria-current="page" routerLink="users/login">Accounttt</a>
+            <a class="nav-link active" aria-current="page" routerLink="users/login">Login</a>
           </div>
           <div *ngIf="isLogin==true">
-            <a class="nav-link active" aria-current="page" routerLink="users/get">Your account</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="[urlAfterLogin]">Your account</a>
           </div>
         </li>
       </ul>

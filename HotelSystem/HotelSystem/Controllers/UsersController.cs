@@ -6,8 +6,10 @@ using HotelSystem.Application.Users.Queries.GetUserDetailByMail;
 using HotelSystem.Application.Users.Queries.GetUsers;
 using HotelSystem.Domain.Entities;
 using HotelSystem.Persistance;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +22,15 @@ namespace HotelSystem.Api.Controllers
     {    
 
         private readonly HotelDbContext _context;
+        private readonly IConfiguration _config;
 
-        public UsersController(HotelDbContext context)
+        public UsersController(HotelDbContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> RegisterUser(CreateUserCommand command)
         {
@@ -33,6 +38,7 @@ namespace HotelSystem.Api.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id:int}")]
         public async Task<ActionResult<UserDetailVm>> GetUserDetail(int id)
         {
@@ -40,6 +46,7 @@ namespace HotelSystem.Api.Controllers
             return vm;
         }
 
+        [AllowAnonymous]
         [HttpGet("{mail}")]
         public async Task<ActionResult<UserDetailByMailVm>> GetUserDetailByMail(string mail)
         {
@@ -47,6 +54,7 @@ namespace HotelSystem.Api.Controllers
             return vm;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<UsersVm>> GetUsers()
         {
@@ -54,6 +62,7 @@ namespace HotelSystem.Api.Controllers
             return Ok(users);
         }
 
+        [AllowAnonymous]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(UpdateUserCommand command)
         {
@@ -61,6 +70,7 @@ namespace HotelSystem.Api.Controllers
             return Ok(user);
         }
 
+        [AllowAnonymous]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
@@ -68,17 +78,22 @@ namespace HotelSystem.Api.Controllers
             return Ok(user);
         }
 
+        [AllowAnonymous]
         [HttpPost("LoginUser")]
         public IActionResult Login(LoginUser user)
         {
-            //user.Authorization = false;
             var userAvailable = _context.Users.Where(u => u.Mail == user.Email && u.Password == user.Password).FirstOrDefault();
             if(userAvailable != null)
             {
-                //user.Authorization = true;
-                return Ok("Success");
+                return Ok(new JwtService(_config).GenerateToken(
+                    userAvailable.Id.ToString(),
+                    userAvailable.FirstName,
+                    userAvailable.LastName,
+                    userAvailable.Mail,
+                    userAvailable.PhoneNumner
+                        )
+                    );
             }
-
             return Ok("Failure");
         }
     }

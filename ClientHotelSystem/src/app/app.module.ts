@@ -18,6 +18,7 @@ import { EditUserComponent } from './components/users/edit-user/edit-user.compon
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
 import { EditUserByMailComponent } from './components/users/edit-user-by-mail/edit-user-by-mail.component';
 import { GetUserComponent } from './components/users/get-user/get-user.component';
+import { UsersService } from './services/users/users.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { GetUserComponent } from './components/users/get-user/get-user.component
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

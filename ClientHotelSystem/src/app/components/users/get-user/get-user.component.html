@@ -41,6 +41,7 @@
                     <input type="text" class="form-control" id="city" name="city" readonly [(ngModel)]="userDetails.city">
                   </div>
                   <button type="button" class="btn btn-primary" [routerLink]="['/users', 'edit', userDetails.mail]">Edit</button>
+                  <button class="btn btn-primary" (click)="logOut()">Log out</button>
               </form>
         </div>        
     </div>  

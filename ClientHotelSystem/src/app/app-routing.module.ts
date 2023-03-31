@@ -13,15 +13,16 @@ import { EditUserComponent } from './components/users/edit-user/edit-user.compon
 import { GetUserComponent } from './components/users/get-user/get-user.component';
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
-
+import { AuthGuard } from './services/users/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'users',
-    component: UsersListComponent
+    component: UsersListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'users/login',
@@ -33,39 +34,48 @@ const routes: Routes = [
   },
   {
     path: 'users/edit/:id',
-    component: EditUserComponent
+    component: EditUserComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'users/edit/:mail',
-    component: EditUserByMailComponent
+    component: EditUserByMailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'users/get/:mail',
-    component: GetUserComponent
+    component: GetUserComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'rooms',
-    component: RoomsListComponent
+    component: RoomsListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'rooms/add',
-    component: AddRoomComponent
+    component: AddRoomComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'rooms/edit/:id',
-    component: EditRoomComponent
+    component: EditRoomComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'reservations',
-    component: ListReservationsComponent
+    component: ListReservationsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'reservations/add',
-    component: AddReservationComponent
+    component: AddReservationComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'reservations/edit/:id',
-    component: EditReservationComponent
+    component: EditReservationComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

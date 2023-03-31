@@ -122,3 +122,4 @@ C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\sitko\OneDrive\Pulpit\Programowanie\HotelSystem\HotelSystem\HotelSystem\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
