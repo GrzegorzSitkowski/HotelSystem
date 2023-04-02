@@ -22,7 +22,7 @@ namespace HotelSystem.Application.Reservations.Queries.GetReservationDetail
             _mapper = mapper;
         }
         public async Task<ReservationDetailVm> Handle(GetReservationDetailQuery request, CancellationToken cancellationToken)
-        {
+        {           
             var reservation = await _context.Reservations.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
 
             var reservationVm = _mapper.Map<ReservationDetailVm>(reservation);

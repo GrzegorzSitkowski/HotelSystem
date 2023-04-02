@@ -19,6 +19,7 @@ namespace HotelSystem.Application.Reservations.Queries.GetReservationDetail
         public bool Payment { get; set; }
         public int UserId { get; set; }
         public int RoomId { get; set; }
+        //public Room Room { get; set; }
 
         public void Mapping(Profile profile)
         {
