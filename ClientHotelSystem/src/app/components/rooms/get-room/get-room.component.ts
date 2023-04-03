@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Room } from 'src/app/models/room.model';
+import { RoomsService } from 'src/app/services/rooms.service';
 
 @Component({
   selector: 'app-get-room',
@@ -7,9 +10,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetRoomComponent implements OnInit {
 
-  constructor() { }
+  roomDetails: Room = {
+    id: '',
+    name: '',
+    capacity: 0,
+    price: 0,
+    avability: false,
+    amenities: '',
+    photoUrl: '',
+    description: ''
+  };
+
+  constructor(private route: ActivatedRoute, private roomService: RoomsService, private router: Router) { }
 
   ngOnInit(): void {
-  }
+    this.route.paramMap.subscribe({
+      next: (params) => {
+        const id = params.get('id');
 
+        if(id){
+          this.roomService.getRoom(id)
+          .subscribe({
+            next: (response) => {
+              this.roomDetails = response;
+            }
+          });
+        }
+      }
+    })
+  }
+  viewRoom(){
+    this.roomService.updateRoom(this.roomDetails.id, this.roomDetails)
+    .subscribe({
+      next: (response) => {
+        this.router.navigate(['rooms']);
+        alert('Update successfully!');
+      }
+    });
+  }
 }
