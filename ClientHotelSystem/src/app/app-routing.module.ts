@@ -14,6 +14,7 @@ import { GetUserComponent } from './components/users/get-user/get-user.component
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { AuthGuard } from './services/users/auth.guard';
+import { GetRoomComponent } from './components/rooms/get-room/get-room.component';
 const routes: Routes = [
   {
     path: '',
@@ -55,6 +56,11 @@ const routes: Routes = [
   {
     path: 'rooms/add',
     component: AddRoomComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'rooms/get/:id',
+    component: GetRoomComponent,
     canActivate: [AuthGuard]
   },
   {
