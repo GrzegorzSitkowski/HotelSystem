@@ -1,42 +1,30 @@
 <div class="container my-5">
-    <h1 class="mb-3">Room</h1>
-
     <div class="row">
         <div class="col-6">
             <form #form="ngForm" (ngSubmit)="viewRoom()">
                 <div class="mb-3">
-                    <label for="id" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" name="id" readonly [(ngModel)]="roomDetails.id">
-                  </div>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="roomDetails.name">
+                  <h2> {{roomDetails.name}}</h2>
                 </div>
                 <div class="mb-3">
-                    <label for="capacity" class="form-label">Capacity</label>
-                    <input type="number" class="form-control" id="capacity" name="capacity" [(ngModel)]="roomDetails.capacity">
+                    <h4>Capacity: {{roomDetails.capacity}}</h4>
                   </div>
                   <div class="mb-3">
-                    <label for="price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" [(ngModel)]="roomDetails.price">
+                    <h4>Price: {{roomDetails.price}} zł</h4>
+                  </div>                
+                  <div class="mb-3">
+                    <img [src]="roomDetails.photoUrl" width="600" height="400">
                   </div>
                   <div class="mb-3">
-                    <label for="avability" class="form-label">Avability</label>
-                    <input type="checkbox" class="form-label" id="avability" name="avability" [(ngModel)]="roomDetails.avability">
+                    <h4>Description:</h4>
+                    <h6>{{roomDetails.description}}</h6>
                   </div>
                   <div class="mb-3">
-                    <label for="amenities" class="form-label">Amenities</label>
-                    <input type="text" class="form-control" id="amenities" name="amenities" [(ngModel)]="roomDetails.amenities">
+                    <h4>Amenities: </h4>
+                    <h6>{{roomDetails.amenities}}</h6>
                   </div>
-                  <div class="mb-3">
-                    <label for="photoUrl" class="form-label">Image Url</label>
-                    <input type="text" class="form-control" id="photoUrl" name="photoUrl" [(ngModel)]="roomDetails.photoUrl">
-                  </div>
-                  <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="description" name="description" [(ngModel)]="roomDetails.description">
-                  </div>
-                <button type="submit" class="btn btn-primary">Edit</button>
+                  <div class="button">
+                    <button type="button" class="btn btn-primary" [routerLink]="['/rooms', 'edit', roomDetails.id]">Edit</button>
+                </div>
                 <button type="submit" class="btn btn-primary">Book</button>
               </form>
         </div>        
