@@ -75,7 +75,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'reservation/check',
+    path: 'rooms/get/:id/reservations/check',
     component: PreReservationComponent
   },
   {
