@@ -33,7 +33,11 @@ export class GetRoomComponent implements OnInit {
           .subscribe({
             next: (response) => {
               this.roomDetails = response;
+              localStorage.setItem("id", response.id);
+              localStorage.setItem("roomName", response.name);
+              localStorage.setItem("price", response.price.toString());
             }
+
           });
         }
       }
