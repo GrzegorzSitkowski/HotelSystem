@@ -20,6 +20,7 @@ import { EditUserByMailComponent } from './components/users/edit-user-by-mail/ed
 import { GetUserComponent } from './components/users/get-user/get-user.component';
 import { UsersService } from './services/users/users.service';
 import { GetRoomComponent } from './components/rooms/get-room/get-room.component';
+import { PreReservationComponent } from './components/reservations/pre-reservation/pre-reservation.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { GetRoomComponent } from './components/rooms/get-room/get-room.component
     LoginUserComponent,
     EditUserByMailComponent,
     GetUserComponent,
-    GetRoomComponent
+    GetRoomComponent,
+    PreReservationComponent
   ],
   imports: [
     BrowserModule,
