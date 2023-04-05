@@ -15,6 +15,7 @@ import { LoginUserComponent } from './components/users/login-user/login-user.com
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { AuthGuard } from './services/users/auth.guard';
 import { GetRoomComponent } from './components/rooms/get-room/get-room.component';
+import { PreReservationComponent } from './components/reservations/pre-reservation/pre-reservation.component';
 const routes: Routes = [
   {
     path: '',
@@ -72,6 +73,10 @@ const routes: Routes = [
     path: 'reservations',
     component: ListReservationsComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'reservation/check',
+    component: PreReservationComponent
   },
   {
     path: 'reservations/add',
