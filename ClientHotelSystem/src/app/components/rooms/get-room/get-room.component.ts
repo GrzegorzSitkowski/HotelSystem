@@ -39,13 +39,4 @@ export class GetRoomComponent implements OnInit {
       }
     })
   }
-  viewRoom(){
-    this.roomService.updateRoom(this.roomDetails.id, this.roomDetails)
-    .subscribe({
-      next: (response) => {
-        this.router.navigate(['rooms']);
-        alert('Update successfully!');
-      }
-    });
-  }
 }
