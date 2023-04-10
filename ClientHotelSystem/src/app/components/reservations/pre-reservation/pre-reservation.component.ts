@@ -12,6 +12,7 @@ export class PreReservationComponent implements OnInit {
   preReservation: PreReservation ={
     checkIn: new Date(),
     checkOut: new Date(),
+    lengthStay: 0,
     roomName: '',
     roomId: '',
     price: 0
@@ -21,13 +22,18 @@ export class PreReservationComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+    this.preReservation.lengthStay = Number(localStorage.getItem("lengthStay"));
     this.preReservation.roomName = localStorage.getItem("roomName");
     this.preReservation.roomId = localStorage.getItem("id");
     this.preReservation.price = Number(localStorage.getItem("price"));
-
-    console.log("Room Name", this.preReservation.roomName);
-    console.log("Room ID", this.preReservation.roomId);
-    console.log("Room Price", this.preReservation.price);
+    console.log(this.preReservation.checkIn?.getDate() + "." + this.preReservation.checkIn?.getMonth() + "." + this.preReservation.checkIn?.getFullYear());
+    this.checkingReservation();
   }
+
+  checkingReservation(){
+
+  }
+
 
 }

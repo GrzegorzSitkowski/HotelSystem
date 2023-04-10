@@ -1,1 +1,24 @@
-
+<div class="container my-5">
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="checkingReservation()">
+              <div class="mb-3">
+                <label for="lengthStay" class="form-label">Length of stay</label>
+                <input type="text" class="form-control" id="lengthStay" name="lengthStay" [(ngModel)]="preReservation.lengthStay">
+              </div>
+              <div class="mb-3">
+                <label for="roomName" class="form-label">Room name</label>
+                <input type="text" class="form-control" id="roomName" name="roomName" [(ngModel)]="preReservation.roomName">
+              </div>
+              <div class="mb-3">
+                <label for="roomId" class="form-label">Room id</label>
+                <input type="text" class="form-control" id="roomId" name="roomId" [(ngModel)]="preReservation.roomId">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Price per night</label>
+                <input type="text" class="form-control" id="price" name="price" [(ngModel)]="preReservation.price">
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
