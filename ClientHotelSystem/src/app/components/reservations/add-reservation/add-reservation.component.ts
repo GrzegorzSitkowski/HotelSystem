@@ -22,6 +22,9 @@ export class AddReservationComponent implements OnInit {
   constructor(private reservationService: ReservationsService, private router: Router) { }
 
   ngOnInit(): void {
+    this.addReservationRequest.mail = localStorage.getItem('mail');
+    this.addReservationRequest.price = Number(localStorage.getItem('price')) * Number(localStorage.getItem('lengthStay'));
+    this.addReservationRequest.roomId = Number(localStorage.getItem('id'));
   }
 
   addReservation(){

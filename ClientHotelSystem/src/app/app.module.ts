@@ -19,6 +19,8 @@ import { LoginUserComponent } from './components/users/login-user/login-user.com
 import { EditUserByMailComponent } from './components/users/edit-user-by-mail/edit-user-by-mail.component';
 import { GetUserComponent } from './components/users/get-user/get-user.component';
 import { UsersService } from './services/users/users.service';
+import { GetRoomComponent } from './components/rooms/get-room/get-room.component';
+import { PreReservationComponent } from './components/reservations/pre-reservation/pre-reservation.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { UsersService } from './services/users/users.service';
     EditUserComponent,
     LoginUserComponent,
     EditUserByMailComponent,
-    GetUserComponent
+    GetUserComponent,
+    GetRoomComponent,
+    PreReservationComponent
   ],
   imports: [
     BrowserModule,

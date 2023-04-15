@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="checkingReservation()">
+              <div class="mb-3">
+                <label for="lengthStay" class="form-label">Length of stay:</label>
+                <input type="text" class="form-control" id="lengthStay" name="lengthStay" [(ngModel)]="preReservation.lengthStay">
+              </div>
+              <div class="mb-3">
+                <h5>Room name: {{preReservation.roomName}}</h5>
+              </div>
+              <div class="mb-3">
+                <h5>Room id: {{preReservation.roomId}}</h5>
+              </div>
+              <div class="mb-3">
+                <h5>Price per night: {{preReservation.price}}zł</h5>
+              </div>
+            </form>
+            <button type="submit" class="btn btn-primary" routerLink="reservations/add" (click)="checkingReservation()">Next</button>
+        </div>
+    </div>
+</div>

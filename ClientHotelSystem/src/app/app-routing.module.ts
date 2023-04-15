@@ -14,6 +14,8 @@ import { GetUserComponent } from './components/users/get-user/get-user.component
 import { LoginUserComponent } from './components/users/login-user/login-user.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { AuthGuard } from './services/users/auth.guard';
+import { GetRoomComponent } from './components/rooms/get-room/get-room.component';
+import { PreReservationComponent } from './components/reservations/pre-reservation/pre-reservation.component';
 const routes: Routes = [
   {
     path: '',
@@ -58,6 +60,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path:'rooms/get/:id',
+    component: GetRoomComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'rooms/edit/:id',
     component: EditRoomComponent,
     canActivate: [AuthGuard]
@@ -68,7 +75,16 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'rooms/get/:id/reservations/check',
+    component: PreReservationComponent
+  },
+  {
     path: 'reservations/add',
+    component: AddReservationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'rooms/get/:id/reservations/check/reservations/add',
     component: AddReservationComponent,
     canActivate: [AuthGuard]
   },
