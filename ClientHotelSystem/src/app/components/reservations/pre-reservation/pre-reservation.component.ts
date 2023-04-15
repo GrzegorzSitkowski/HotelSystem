@@ -27,13 +27,10 @@ export class PreReservationComponent implements OnInit {
     this.preReservation.roomName = localStorage.getItem("roomName");
     this.preReservation.roomId = localStorage.getItem("id");
     this.preReservation.price = Number(localStorage.getItem("price"));
-
-    console.log("Stay: "  + this.preReservation.lengthStay);
   }
 
   checkingReservation(){
     localStorage.setItem("lengthStay", this.preReservation.lengthStay?.toString());
-    console.log("Stayyyy: "  + this.preReservation.lengthStay);
   }
 
 }

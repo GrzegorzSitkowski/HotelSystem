@@ -1,10 +1,10 @@
 export interface Reservation{
     id: string;
-    price: number;
-    mail: string;
+    price: number | null;
+    mail: string | null;
     checkIn: Date;
     checkOut: Date;
     payment: boolean;
     userId: number,
-    roomId: number
+    roomId: number | null
 }
