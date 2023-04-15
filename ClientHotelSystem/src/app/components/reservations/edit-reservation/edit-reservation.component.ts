@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Reservation } from 'src/app/models/reservation.model';
+import { GetReservation } from 'src/app/models/reservations/get-reservations.model';
 import { ReservationsService } from 'src/app/services/reservations/reservations.service';
 
 @Component({
@@ -9,12 +10,12 @@ import { ReservationsService } from 'src/app/services/reservations/reservations.
   styleUrls: ['./edit-reservation.component.css']
 })
 export class EditReservationComponent implements OnInit {
-  reservationDetails: Reservation = {
+  reservationDetails: GetReservation = {
     id: '0',
     price: 0,
     mail: '',
-    checkIn: new Date(),
-    checkOut: new Date(),
+    checkIn: '',
+    checkOut: '',
     payment: false,
     userId: 0,
     roomId: 0
