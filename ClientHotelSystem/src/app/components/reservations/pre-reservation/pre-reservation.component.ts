@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PreReservation } from 'src/app/models/reservations/pre-reservations.model';
 
@@ -7,6 +7,9 @@ import { PreReservation } from 'src/app/models/reservations/pre-reservations.mod
   templateUrl: './pre-reservation.component.html',
   styleUrls: ['./pre-reservation.component.css']
 })
+
+
+
 export class PreReservationComponent implements OnInit {
 
   preReservation: PreReservation ={
@@ -16,24 +19,21 @@ export class PreReservationComponent implements OnInit {
     roomName: '',
     roomId: '',
     price: 0
-
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {  }
 
-  ngOnInit(): void {
-
-    this.preReservation.lengthStay = Number(localStorage.getItem("lengthStay"));
+  ngOnInit(): void {  
     this.preReservation.roomName = localStorage.getItem("roomName");
     this.preReservation.roomId = localStorage.getItem("id");
     this.preReservation.price = Number(localStorage.getItem("price"));
-    console.log(this.preReservation.checkIn?.getDate() + "." + this.preReservation.checkIn?.getMonth() + "." + this.preReservation.checkIn?.getFullYear());
-    this.checkingReservation();
+
+    console.log("Stay: "  + this.preReservation.lengthStay);
   }
 
   checkingReservation(){
-
+    localStorage.setItem("lengthStay", this.preReservation.lengthStay?.toString());
+    console.log("Stayyyy: "  + this.preReservation.lengthStay);
   }
-
 
 }
