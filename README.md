@@ -43,4 +43,4 @@ That one is built in Clean Architecture and CQRS pattern.
 
 
 ## Status
-Project isn't finished, WORK IN PROGRESS.
+Project is finish.
